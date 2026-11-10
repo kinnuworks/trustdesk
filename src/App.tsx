@@ -516,7 +516,7 @@ function Task({ n, q, r, onOpen, onAnswer, onSend, sent }: { n: number; q: Quest
       {suggested != null && !editing && (
         <div className="suggest">
           <div>
-            <p className="small dim">Suggested answer</p>
+            <p className="small dim">Suggested answer. Check the quote before you confirm.</p>
             <p className="suggest__a">{clip(q.choices[suggested], 120)}</p>
             {r.evidence && <p className="small">“{clip(r.evidence.quote, 140)}” <span className="dim">{r.evidence.docTitle}</span></p>}
           </div>
