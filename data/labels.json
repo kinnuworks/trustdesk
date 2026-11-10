@@ -1,0 +1,52 @@
+{
+ "labels": {
+  "1": 0,
+  "2": 0,
+  "3": "owner",
+  "4": 0,
+  "5": 0,
+  "6": 0,
+  "7": 0,
+  "8": 0,
+  "9": 1,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": "owner",
+  "14": 0,
+  "15": 0,
+  "16": 0,
+  "17": 0,
+  "18": 0,
+  "19": 0,
+  "20": 1,
+  "21": 0,
+  "22": 1,
+  "23": 0,
+  "24": "owner",
+  "25": 0,
+  "26": 0,
+  "27": 0,
+  "28": 1,
+  "29": 0,
+  "30": 0,
+  "31": 0,
+  "32": 0,
+  "33": 0,
+  "34": 0,
+  "35": 0,
+  "36": 2,
+  "37": 0
+ },
+ "notes": {
+  "3": "No policy mentions HSTS.",
+  "13": "Logging standard says 90 days; incident response plan says 12 months. Conflict.",
+  "24": "Data centers are the cloud provider's; office entry log retention is not stated.",
+  "9": "Uses a zero-trust proxy, no traditional VPN.",
+  "20": "Unenrolled/unencrypted phones are blocked.",
+  "37": "Checks cover Engineering and Support with production access; acceptable to route to owner."
+ },
+ "accept_owner_also": [
+  37
+ ]
+}

@@ -1,0 +1,414 @@
+[
+ {
+  "n": 1,
+  "vsaq_index": 0,
+  "vsaq_id": "application_vm_securitycontact",
+  "source": "webapp",
+  "question": "Do you have an easily discoverable way for external researchers to report security vulnerabilities in your systems?",
+  "choices": [
+   "Yes, we have a published security email contact, or we provide another way for users to report security issues. Incoming reports are timely reviewed and triaged.",
+   "No, we do not currently offer a way to report security vulnerabilities for priority handling."
+  ]
+ },
+ {
+  "n": 2,
+  "vsaq_index": 2,
+  "vsaq_id": "application_ssl_configuration_ciphers",
+  "source": "webapp",
+  "question": "Have you recently reviewed your SSL configuration to ensure that only secure protocols and ciphers are offered to clients?",
+  "choices": [
+   "Yes, we regularly review the cipher suite advertised by the server and the protocols it uses.",
+   "We're not sure whether our SSL/TLS configuration is secure."
+  ]
+ },
+ {
+  "n": 3,
+  "vsaq_index": 8,
+  "vsaq_id": "tip_application_ssl_hsts",
+  "source": "webapp",
+  "question": "To improve security for your users even further, have you deployed HTTP Strict Transport Security (HSTS) on your server?",
+  "choices": [
+   "Yes, we have HSTS configured with a max-age value of at least 6 months.",
+   "No, we don't use HTTP Strict Transport Security, or we have a short max-age configured."
+  ]
+ },
+ {
+  "n": 4,
+  "vsaq_index": 13,
+  "vsaq_id": "application_custom_auth_pwdreq",
+  "source": "webapp",
+  "question": "Does the application enforce minimum password security requirements (e.g., a certain length, character classes, etc.)?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "n": 5,
+  "vsaq_index": 18,
+  "vsaq_id": "application_auth_cookies_timeout",
+  "source": "webapp",
+  "question": "Do sessions automatically time out after a specified period of inactivity?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "n": 6,
+  "vsaq_index": 38,
+  "vsaq_id": "network_firewalls",
+  "source": "infrastructure",
+  "question": "Does your company use firewalls to restrict traffic into and out of your network at strategic points?",
+  "choices": [
+   "Yes, we have firewalls for filtering all inbound and outbound traffic.",
+   "We do not use firewalls."
+  ]
+ },
+ {
+  "n": 7,
+  "vsaq_index": 41,
+  "vsaq_id": "network_encryption",
+  "source": "infrastructure",
+  "question": "Is encryption and integrity protection in place for all internal network traffic that potentially carries sensitive information (including passwords, emails, files, source code, management traffic, etc.)?",
+  "choices": [
+   "Yes",
+   "Some unencrypted protocols may carry sensitive information."
+  ]
+ },
+ {
+  "n": 8,
+  "vsaq_index": 44,
+  "vsaq_id": "network_monitoring",
+  "source": "infrastructure",
+  "question": "Have you implemented monitoring and alerting for your network?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "n": 9,
+  "vsaq_index": 51,
+  "vsaq_id": "network_vpn",
+  "source": "infrastructure",
+  "question": "Do you operate a VPN that allows remote access to your network?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "n": 10,
+  "vsaq_index": 61,
+  "vsaq_id": "servers_patching",
+  "source": "infrastructure",
+  "question": "Do you have a process for installing operating system and application updates and security patches on servers?",
+  "choices": [
+   "Yes, we are very diligent about applying security updates to operating systems and applications.",
+   "No, we don't have a process for patching. Some updates might fall through the cracks."
+  ]
+ },
+ {
+  "n": 11,
+  "vsaq_index": 62,
+  "vsaq_id": "servers_patching_schedule_exceptions",
+  "source": "infrastructure",
+  "question": "Do you also have an emergency process for installing patches outside of the regular patching schedule when high-risk vulnerabilities are identified?",
+  "choices": [
+   "Yes, we carefully consider the risk associated with each new vulnerability and decide whether the patch should be deployed outside of the regular schedule.",
+   "No, we generally don't deviate from our standard patching schedule, even for critical vulnerabilities."
+  ]
+ },
+ {
+  "n": 12,
+  "vsaq_index": 64,
+  "vsaq_id": "servers_logging",
+  "source": "infrastructure",
+  "question": "Are your systems configured to log security-relevant events, such as authentication, data access, etc.?",
+  "choices": [
+   "Yes, we have comprehensive logging, including security events, for all relevant services.",
+   "No, our logging is basic or incidental."
+  ]
+ },
+ {
+  "n": 13,
+  "vsaq_index": 65,
+  "vsaq_id": "servers_logging_retention",
+  "source": "infrastructure",
+  "question": "Do you retain security event logs for at least six months, and do you monitor them regularly?",
+  "choices": [
+   "Yes, we regularly review these logs and retain them in case we need to investigate a security incident.",
+   "No, these logs are not retained and/or monitored."
+  ]
+ },
+ {
+  "n": 14,
+  "vsaq_index": 67,
+  "vsaq_id": "servers_admin_windows_da_accounts",
+  "source": "infrastructure",
+  "question": "Do your Windows domain administrators have separate accounts with lower privileges that they use for day-to-day tasks?",
+  "choices": [
+   "Yes. Our domain administrators use their highly privileged accounts only when necessary. For day-to-day tasks, they use regular accounts with fewer privileges.",
+   "No, our domain administrators are usually logged in with their domain-admin accounts for day-to-day work."
+  ]
+ },
+ {
+  "n": 15,
+  "vsaq_index": 71,
+  "vsaq_id": "servers_admin_auditing",
+  "source": "infrastructure",
+  "question": "Do you have procedures in place for regularly auditing administrative access to your servers?",
+  "choices": [
+   "Yes, we review the actions our administrators take to make sure we catch issues, such as a compromised account.",
+   "No, we generally don't audit administrative access unless prompted by an issue."
+  ]
+ },
+ {
+  "n": 16,
+  "vsaq_index": 75,
+  "vsaq_id": "servers_backup_media_offsite",
+  "source": "infrastructure",
+  "question": "Do you store backup media in an off-site facility that is protected against potential disaster?",
+  "choices": [
+   "Yes, our backup media is stored in a protected facility that is far enough away from our other facilities to mitigate the impact in the event of a disaster.",
+   "No, backup media is stored on site."
+  ]
+ },
+ {
+  "n": 17,
+  "vsaq_index": 77,
+  "vsaq_id": "servers_backup_test",
+  "source": "infrastructure",
+  "question": "Do you regularly test your backups?",
+  "choices": [
+   "Yes, we test the entire process of recovery, including restoring entire systems from backup.",
+   "We don't usually test backups."
+  ]
+ },
+ {
+  "n": 18,
+  "vsaq_index": 89,
+  "vsaq_id": "clients_av",
+  "source": "infrastructure",
+  "question": "Do you have controls in place to protect client systems from malware?",
+  "choices": [
+   "Yes, we regularly scan our client systems for known malware, or we limit client systems to whitelisted software identified by cryptographic hashes.",
+   "Some systems in our client fleet may not be fully protected."
+  ]
+ },
+ {
+  "n": 19,
+  "vsaq_index": 96,
+  "vsaq_id": "clients_laptops_hd_encrypted",
+  "source": "infrastructure",
+  "question": "Do you fully encrypt the hard disks of laptops and other portable client devices?",
+  "choices": [
+   "Yes, we use full-disk encryption for our laptop fleet.",
+   "No, laptop hard disks are not fully encrypted. Users are responsible for protecting sensitive information on laptops."
+  ]
+ },
+ {
+  "n": 20,
+  "vsaq_index": 97,
+  "vsaq_id": "clients_mobile_phones",
+  "source": "infrastructure",
+  "question": "Do you allow access to confidential information (e.g., email) from unencrypted mobile devices such as phones and tablets?",
+  "choices": [
+   "Yes, our users can sync potentially confidential information like email onto their mobile phones or tablets.",
+   "No, we do not allow access to corporate information from unencrypted devices such as mobile phones or tablets."
+  ]
+ },
+ {
+  "n": 21,
+  "vsaq_index": 100,
+  "vsaq_id": "testing_pentests",
+  "source": "infrastructure",
+  "question": "Does an independent third party regularly perform penetration tests on all systems used to provide services to customers?",
+  "choices": [
+   "Yes.",
+   "No, we rarely or never have independent third parties do penetration tests."
+  ]
+ },
+ {
+  "n": 22,
+  "vsaq_index": 102,
+  "vsaq_id": null,
+  "source": "infrastructure",
+  "question": "How often (on average) are penetration tests done for the scope you described?",
+  "choices": [
+   "Multiple times per year.",
+   "Annually.",
+   "Less frequently."
+  ]
+ },
+ {
+  "n": 23,
+  "vsaq_index": 105,
+  "vsaq_id": null,
+  "source": "infrastructure",
+  "question": "How often do you run vulnerability scans?",
+  "choices": [
+   "Once per month or more often",
+   "Once per quarter",
+   "Less frequently"
+  ]
+ },
+ {
+  "n": 24,
+  "vsaq_index": 112,
+  "vsaq_id": "office_acclogs",
+  "source": "physical_and_datacenter",
+  "question": "Are physical entry logs kept for at least six months?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "n": 25,
+  "vsaq_index": 124,
+  "vsaq_id": "secprog",
+  "source": "security_privacy_programs",
+  "question": "Does your company have a strong, established security program, and does the scope of the program include all information processed as part of this project?",
+  "choices": [
+   "Yes, our security program covers all aspects of information security for this project.",
+   "No, our security program is more limited."
+  ]
+ },
+ {
+  "n": 26,
+  "vsaq_index": 127,
+  "vsaq_id": "secprog_team",
+  "source": "security_privacy_programs",
+  "question": "Has your company selected an individual or team to be responsible for managing the information security and privacy program?",
+  "choices": [
+   "Yes, management has selected an individual or team to be responsible for the information security and privacy program.",
+   "No, there is no ownership for security and privacy in the company."
+  ]
+ },
+ {
+  "n": 27,
+  "vsaq_index": 129,
+  "vsaq_id": null,
+  "source": "security_privacy_programs",
+  "question": "How often are internal information security and privacy audits performed?",
+  "choices": [
+   "Quarterly or more often.",
+   "At least annually.",
+   "Less frequently."
+  ]
+ },
+ {
+  "n": 28,
+  "vsaq_index": 132,
+  "vsaq_id": null,
+  "source": "security_privacy_programs",
+  "question": "How often does an independent third party perform audits of your security and privacy program?",
+  "choices": [
+   "Quarterly or more often.",
+   "Annually.",
+   "Less frequently."
+  ]
+ },
+ {
+  "n": 29,
+  "vsaq_index": 137,
+  "vsaq_id": "secprog_vendorsec_owner",
+  "source": "security_privacy_programs",
+  "question": "Has your company selected an individual or team to be responsible for reviewing service providers and subcontractors, to ensure that they sufficiently protect the security and privacy of sensitive information and systems?",
+  "choices": [
+   "Yes.",
+   "No."
+  ]
+ },
+ {
+  "n": 30,
+  "vsaq_index": 138,
+  "vsaq_id": "secprog_vendorsec_clauses",
+  "source": "security_privacy_programs",
+  "question": "Do your written contracts with relevant third parties require them to adequately protect the privacy and security of all confidential information they may get access to during the partnership?",
+  "choices": [
+   "Yes, we require all our outsourcing providers, vendors, and subcontractors to agree to contract clauses that assert security requirements.",
+   "No, not all vendors that are potentially exposed to confidential information have agreed to security requirements contractually."
+  ]
+ },
+ {
+  "n": 31,
+  "vsaq_index": 139,
+  "vsaq_id": "secprog_changemgmt_documented",
+  "source": "security_privacy_programs",
+  "question": "Is your change management process formally documented, and does it classify changes by impact and size?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "n": 32,
+  "vsaq_index": 142,
+  "vsaq_id": "secprog_incidents_procedures",
+  "source": "security_privacy_programs",
+  "question": "Are incident response procedures documented?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "n": 33,
+  "vsaq_index": 144,
+  "vsaq_id": "secprog_incidents_inform",
+  "source": "security_privacy_programs",
+  "question": "Do you inform affected customers about security incidents?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "n": 34,
+  "vsaq_index": 146,
+  "vsaq_id": "secprog_peopleops_needtoknow",
+  "source": "security_privacy_programs",
+  "question": "Do you have processes in place to ensure that access to data is granted solely on a \"need-to-know\" basis, in accordance with the job descriptions and responsibilities of users? Do these processes also revoke access when the need no longer exists?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "n": 35,
+  "vsaq_index": 148,
+  "vsaq_id": "secprog_peopleops_leaver",
+  "source": "security_privacy_programs",
+  "question": "Do you have processes in place to make sure access (both physical and logical) is revoked when an employee, intern, vendor, contractor, or other associate leaves the company or a contract ends?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "n": 36,
+  "vsaq_index": 149,
+  "vsaq_id": null,
+  "source": "security_privacy_programs",
+  "question": "How often do you require your employees to undergo information security and privacy training?",
+  "choices": [
+   "Never.",
+   "Once, upon hire.",
+   "Upon hire, and at least once per year."
+  ]
+ },
+ {
+  "n": 37,
+  "vsaq_index": 151,
+  "vsaq_id": "secprog_background_checks",
+  "source": "security_privacy_programs",
+  "question": "Do you perform background checks for personnel who are entrusted with sensitive information or granted access to sensitive systems?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ }
+]

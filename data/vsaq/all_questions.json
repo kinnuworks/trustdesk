@@ -1,0 +1,1553 @@
+[
+ {
+  "id": "application_vm_securitycontact",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Vulnerability Reporting a",
+  "text": "Do you have an easily discoverable way for external researchers to report security vulnerabilities in your systems?",
+  "choices": [
+   "Yes, we have a published security email contact, or we provide another way for users to report security issues. Incoming reports are timely reviewed and triaged.",
+   "No, we do not currently offer a way to report security vulnerabilities for priority handling."
+  ]
+ },
+ {
+  "id": null,
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / HTTPS and Mixed-Content R",
+  "text": "Select the option that best describes your web application:",
+  "choices": [
+   "The web application is reachable exclusively over HTTPS. Even if the user manually edits the URL to start with <code>http://</code>, it won't work or it will redirect to <code>https://</code>.",
+   "The web application is flexible \u2014 users can reach it over HTTP or over HTTPS.",
+   "The web application supports HTTP only, and can't be reached over HTTPS even if you edit the URL."
+  ]
+ },
+ {
+  "id": "application_ssl_configuration_ciphers",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / HTTPS and Mixed-Content R",
+  "text": "Have you recently reviewed your SSL configuration to ensure that only secure protocols and ciphers are offered to clients?",
+  "choices": [
+   "Yes, we regularly review the cipher suite advertised by the server and the protocols it uses.",
+   "We're not sure whether our SSL/TLS configuration is secure."
+  ]
+ },
+ {
+  "id": "application_ssl_configuration_pfs",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / HTTPS and Mixed-Content R",
+  "text": "Does your server offer forward secrecy for clients that support it?",
+  "choices": [
+   "Yes, the server supports ECDHE and DHE ciphers that offer forward secrecy.",
+   "No, no ciphers providing forward secrecy are enabled."
+  ]
+ },
+ {
+  "id": "application_ssl_configuration_keys",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / HTTPS and Mixed-Content R",
+  "text": "Are your SSL/TLS private keys appropriately protected on your web servers?",
+  "choices": [
+   "Yes, we have taken all necessary steps to protect our private keys.",
+   "I'm not sure how well protected they are."
+  ]
+ },
+ {
+  "id": "application_ssl_configuration_termination",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / HTTPS and Mixed-Content R",
+  "text": "Where is the SSL connection between the user and your application terminated?",
+  "choices": [
+   "At the application server",
+   "At the load balancer",
+   "Somewhere else"
+  ]
+ },
+ {
+  "id": "application_ssl_configuration_lb_traffic",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / HTTPS and Mixed-Content R",
+  "text": "How is traffic between the load balancer and the application servers protected?",
+  "choices": [
+   "Traffic is encrypted and certificates between load balancer and application servers are validated.",
+   "Traffic is unencrypted, but all networks transited between load balancers and application servers are owned and exclusively used by us.",
+   "Traffic is unencrypted, and traffic has to transit through networks not owned and exclusively used by us.",
+   "Through other means."
+  ]
+ },
+ {
+  "id": "application_ssl_mixedcontent",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / HTTPS and Mixed-Content R",
+  "text": "Applications served over SSL may still be vulnerable to attacks if resources (often JavaScript, style sheets, or other active content) are included over plain HTTP. This defeats the purpose of SSL, because the active content loaded through plain HTTP will have access to the DOM of content protected by SSL. Make sure no resources are included from plain HTTP sites. Typically, browsers will help identify cases where resources from non-SSL sites are included, by displaying mixed content warnings.To avoid these issues, do you have checks in place to ensure that all references to resources either point to SSL or are protocol-relative?",
+  "choices": [
+   "Yes, we are very careful and have specific controls in place to prevent mixed-content issues.",
+   "It wouldn't be too difficult for something to fall through the cracks and introduce mixed-content bugs."
+  ]
+ },
+ {
+  "id": "tip_application_ssl_hsts",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / HTTPS and Mixed-Content R",
+  "text": "To improve security for your users even further, have you deployed HTTP Strict Transport Security (HSTS) on your server?",
+  "choices": [
+   "Yes, we have HSTS configured with a max-age value of at least 6 months.",
+   "No, we don't use HTTP Strict Transport Security, or we have a short max-age configured."
+  ]
+ },
+ {
+  "id": "application_ssl_cookies_secure",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / HTTPS and Mixed-Content R",
+  "text": "If your application supports authentication, are authentication cookies marked with the secure attribute?",
+  "choices": [
+   "Yes, the authentication cookies are marked <code>secure</code>.",
+   "I'm not sure whether the application does that."
+  ]
+ },
+ {
+  "id": null,
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Implementing OAuth2 Login / OpenID Connect from scratch is fairly complex and error-prone, and mistakes can result in security vulnerabilities. Select the option that best describes your implementation:",
+  "choices": [
+   "Very secure: We're using a standard OAuth2 library, and we update it when security fixes are released.",
+   "Secure: We implemented OAuth2 on our own, but our employees are experts and we're convinced that it is implemented securely.",
+   "Not sure: We implemented OAuth2 on our own, and it seemed simple at the time. I'm not sure about the security of our implementation."
+  ]
+ },
+ {
+  "id": "application_custom_auth",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Does any part of the application employ username/password-based authentication?",
+  "choices": [
+   "Yes",
+   "No, all authentication is based on single sign-on (SSO)."
+  ]
+ },
+ {
+  "id": "application_custom_auth_chpasswd",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Does your application allow users to change their passwords?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "application_custom_auth_pwdreq",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Does the application enforce minimum password security requirements (e.g., a certain length, character classes, etc.)?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": null,
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "How does the application store passwords?",
+  "choices": [
+   "In plain text (unencrypted)",
+   "Using reversible encryption (e.g., DES, 3DES, AES, etc.).",
+   "Using a secure <a href='https://en.wikipedia.org/wiki/Cryptographic_hash_function'>cryptographic one-way hash function</a> (such as SHA-256) of the password, without the use of a <a href='http://en.wikipedia.org/wiki/Salt_(cryptography)'>salt</a>",
+   "Using a secure <a href='http://en.wikipedia.org/wiki/Cryptographic_hash_function'>cryptographic one-way hash function</a> (such as SHA-256) of the <a href='http://en.wikipedia.org/wiki/Salt_(cryptography)'>salted</a> password",
+   "Using a dedicated password-based key derivation function, such as <a href='http://en.wikipedia.org/wiki/Bcrypt'>bcrypt</a>, <a href='http://en.wikipedia.org/wiki/PBKDF2'>PBKDF2</a> or <a href='http://en.wikipedia.org/wiki/Scrypt'>scrypt</a>",
+   "None of the above"
+  ]
+ },
+ {
+  "id": null,
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "How do users get their initial passwords?",
+  "choices": [
+   "Users self-register and set their passwords online directly within the application.",
+   "The initial password or a link to set the initial password is sent to users by email.",
+   "The initial password is provided in a (physical) letter sent to a verified address.",
+   "None of the above."
+  ]
+ },
+ {
+  "id": "application_custom_auth_initpwd_prepopulated",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "When the user gets their initial password, will their account be prepopulated with any confidential information? For example, in an online payroll portal, a user can typically access previous pay statements even when the account is brand new.",
+  "choices": [
+   "Yes, when users log in for the first time, confidential information will already be present.",
+   "No, at the initial login, no confidential information will be available to the user."
+  ]
+ },
+ {
+  "id": "application_auth_cookies_httponly",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Cookies can be decorated with a special keyword, HttpOnly. If this keyword is set, the browser will not allow JavaScript to access the cookie. Even if the application has a cross-site scripting vulnerability, this keyword makes it much harder for an attacker to steal the session cookie.",
+  "choices": [
+   "The <code>HttpOnly</code> keyword is set for all our authentication cookies.",
+   "Our application does not make use of this defense-in-depth mechanism."
+  ]
+ },
+ {
+  "id": "application_auth_cookies_timeout",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Do sessions automatically time out after a specified period of inactivity?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "application_auth_cookies_prng",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Does the application use a secure cryptographic pseudo random number generator (PRNG) to generate session IDs? The PRNG should not allow the state of the generator to be recalculated from its output, and the entropy of the session ID should be sufficient to make brute-forcing infeasible.",
+  "choices": [
+   "Yes, we use a PRNG that meets these criteria.",
+   "No, we don't use a PRNG, or our PRNG doesn't meet these criteria."
+  ]
+ },
+ {
+  "id": "application_auth_cookies_invalidation",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Does your application offer a \"log out\" button or link that, when clicked, not only terminates the session (deletes cookies from the client) but also invalidates the entire session ID?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "application_authz_horizontal",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Horizontal Access Control: Horizontal access control refers to isolation between users of the same role. For example, consider an application that allows users to access their payroll statements. The application must ensure that a user cannot access another user's statements; i.e., if the user's statement for the month of May is found at statement.html?id=8372&month=5, it shouldn't be possible to see someone else's pay stub simply by loading statement.html?id=8373&month=5.",
+  "choices": [
+   "Our application enforces these restrictions on the server side. We have processes in place to make sure nothing slips through the cracks.",
+   "It's possible that we missed checks like this in a few places."
+  ]
+ },
+ {
+  "id": "application_authz_vertical",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Vertical Access Control: When an application supports multiple roles, users should not be able to gain privileges or perform unauthorized actions by loading pages or features that should only be available to users in a different role. Throughout your application, have you ensured that users can perform only those actions that are appropriate for their roles?",
+  "choices": [
+   "Our application enforces these restrictions on the server side. We have processes in place to make sure nothing slips through the cracks.",
+   "It's possible that we missed checks like this in a few places."
+  ]
+ },
+ {
+  "id": "application_authz_xsrf",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Does your application protect all state-changing actions against XSRF?",
+  "choices": [
+   "Yes, all state-changing actions are protected. We have a way to ensure that no actions are missed (such as enforcing XSRF-token checks in a central place).",
+   "Some actions might not be protected against XSRF."
+  ]
+ },
+ {
+  "id": null,
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "What strategy do you use to protect against XSRF?",
+  "choices": [
+   "We protect requests that change the state with tokens that are bound to the user they were generated for, and that expire after a certain amount of time.",
+   "We use a custom fixed header that we add to requests.",
+   "The application does one of the following: verifies the referrer header; requires all state-changing actions to be POST requests; employs another mechanism to protect against XSRF."
+  ]
+ },
+ {
+  "id": "application_authz_xssi_protections",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Your application may be affected by XSSI, unless you specifically protect against this kind of attack.",
+  "choices": [
+   "We use one of the following mechanisms to protect against this kind of attack:<ul><li>protect transmission of such data with an unguessable, unpredictable token (this token must fulfill the same requirements as those described for XSRF tokens above).</li><li>require POST requests, so the data cannot be included in &lt;script&gt tags.</li></ul>",
+   "It's possible that part of our web application is vulnerable to XSSI."
+  ]
+ },
+ {
+  "id": null,
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Authentication and Author",
+  "text": "Depending on the nature of your application and the actions that can be taken in it, you may need to protect against clickjacking.If you don't typically need to frame web pages, your application should use the X-Frame-Options response header to tell the browser not to render any page that's framed from a different origin:X-Frame-Options: SAMEORIGIN",
+  "choices": [
+   "Our application employs protections against clickjacking (such as using the <code>X-Frame-Options</code> header).",
+   "Our application does not have such protections."
+  ]
+ },
+ {
+  "id": "application_xss_content_type",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Common Web Vulnerabilitie",
+  "text": "In addition to applying the strategies you've identified, does the application set a valid and appropriate content type and character set for each page (in the Content-Type HTTP header)?",
+  "choices": [
+   "Yes, we take great care to set this, knowing that otherwise we might be introducing XSS vulnerabilities.",
+   "I'm not sure all pages set an appropriate content type."
+  ]
+ },
+ {
+  "id": "application_xss_fileupload",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Common Web Vulnerabilitie",
+  "text": "Earlier, you noted that the application has a file upload feature. Does the application allow other users (or administrators) to access the files that are uploaded?",
+  "choices": [
+   "Yes, this is a feature of our application.",
+   "No; uploaded files are processed but can't be downloaded again."
+  ]
+ },
+ {
+  "id": "application_xss_dombased",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Common Web Vulnerabilitie",
+  "text": "Some XSS vulnerabilities work exclusively on the client side, in an application's scripting code. This kind of XSS is commonly referred to as DOM-based XSS. Because server-side escaping of user input does not protect against DOM-based XSS, you need a strategy for dealing with client-side scripting code that handles user input, as well as parts of the DOM that may contain user input (such as document.location).",
+  "choices": [
+   "We know about DOM-based XSS, and we take specific steps to protect against this kind of vulnerability.",
+   "It may be possible that something slipped through the cracks and our application has DOM-based XSS vulnerabilities."
+  ]
+ },
+ {
+  "id": "application_sqli_prepared_consistent",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Common Web Vulnerabilitie",
+  "text": "Do you take special steps (policies, code reviews, audits, etc.) to ensure that prepared statements are used consistently, and that string concatenation is never used to construct database queries?",
+  "choices": [
+   "Yes, we have all or most of these measures in place, and we're very confident that there are no SQL injection vulnerabilities in our code.",
+   "We try to make our developers use prepared statements, but it may be possible for some string concatenation to slip through."
+  ]
+ },
+ {
+  "id": null,
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Common Web Vulnerabilitie",
+  "text": "You mentioned previously that your application allows users to upload files. Where does the application store those files?",
+  "choices": [
+   "On the file system",
+   "In a database",
+   "Somewhere else"
+  ]
+ },
+ {
+  "id": "application_testing_unit",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Testing, QA, and Monitori",
+  "text": "Are you using unit tests or similar methods?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": null,
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Testing, QA, and Monitori",
+  "text": "How would you describe the code coverage of your unit tests?",
+  "choices": [
+   "<b>Robust:</b> The vast majority of our code is tested through unit tests; code coverage is at least &gt;80%.",
+   "<b>Weak:</b> We have some unit testing, but much of the code is not tested.",
+   "<b>Nonexistent:</b> We have no (or almost no) unit tests."
+  ]
+ },
+ {
+  "id": "application_testing_unit_security",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Testing, QA, and Monitori",
+  "text": "Do you have special unit tests in place for testing the security of your code? For example, unit tests can be used to do the following:Verify that XSRF tokens are required for all state-changing actionsConfirm that user input is correctly escaped and/or sanitizedCheck that the application enforces access control (e.g., user A doesn't have access to user B's data)",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "application_testing_qa_security",
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Testing, QA, and Monitori",
+  "text": "Do your engineers and your QA team look for potential security issues during release testing, and have they been trained to do so?",
+  "choices": [
+   "Yes, our QA process explicitly includes testing for security issues that might have been introduced in the new version.",
+   "This is an area where we have some room for improvement."
+  ]
+ },
+ {
+  "id": null,
+  "source": "webapp",
+  "section": "Web Application Security Questionnaire / Application / Testing, QA, and Monitori",
+  "text": "How would you describe your post-launch monitoring?",
+  "choices": [
+   "<b>Robust</b>: We have procedures in place to log and monitor for unexpected crashes, exceptions, and other error conditions. If something looks suspicious, a security-conscious engineer evaluates it.",
+   "<b>Weak</b>: If something goes terribly wrong, such as massive spikes in crash rates or other large-scale anomalies, we will probably notice. But our monitoring is fairly coarse, and there is room for improvement.",
+   "<b>Nonexistent</b>: At the moment, we are not doing any kind of post-release monitoring that looks for signs of exploitation or increases in crashes/exceptions."
+  ]
+ },
+ {
+  "id": "network_config_guidelines",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network",
+  "text": "It's essential to have a written set of guidelines for the configuration, maintenance, and use of your network. Written guidelines and rules help preserve the availability, integrity, and confidentiality of the network itself, and well as the information transmitted over it.",
+  "choices": [
+   "We have clearly defined network guidelines. They are regularly reviewed and applied to all appropriate networking devices.",
+   "We don't currently have guidelines, or they're not consistently applied."
+  ]
+ },
+ {
+  "id": "network_firewalls",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network",
+  "text": "Firewalls are a basic network security control. Does your company use firewalls to restrict traffic into and out of your network at strategic points?",
+  "choices": [
+   "Yes, we have firewalls for filtering all inbound and outbound traffic.",
+   "We do not use firewalls."
+  ]
+ },
+ {
+  "id": "network_dmz",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network / Firewalls",
+  "text": "Does your company place all externally exposed systems in a DMZ, separated from the internal network by a network filter?",
+  "choices": [
+   "Yes, all of our externally exposed systems are hosted in a DMZ and separate from our internal systems.",
+   "Some of our exposed systems may be on the internal network."
+  ]
+ },
+ {
+  "id": "network_separation",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network / Firewalls",
+  "text": "Does your company implement a network zoning concept that separates systems by function, value, and risk level?",
+  "choices": [
+   "Yes, we operate multiple network zones, separated by filters, that group systems by their value, function, or risk level.",
+   "No, all of our systems are hosted in a single zone and have network-level access to each other."
+  ]
+ },
+ {
+  "id": "network_encryption",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network",
+  "text": "Is encryption and integrity protection in place for all internal network traffic that potentially carries sensitive information (including passwords, emails, files, source code, management traffic, etc.)?",
+  "choices": [
+   "Yes",
+   "Some unencrypted protocols may carry sensitive information."
+  ]
+ },
+ {
+  "id": "network_arpspoofing",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network / Compensating Controls for Plai",
+  "text": "Do you have controls in place to protect your systems from ARP spoofing?",
+  "choices": [
+   "Yes, our switches protect against ARP spoofing, and where this feature is not available, we monitor for spoofed ARP packets in order to quickly identify attacks.",
+   "Not all of our network zones are protected against ARP spoofing."
+  ]
+ },
+ {
+  "id": "network_management_segment",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network / Compensating Controls for Plai",
+  "text": "Do you have a separate management network for managing network devices?",
+  "choices": [
+   "Yes, management of networking devices is done through a separate network with strong access restrictions (e.g., 802.1x, or additional physical security for ports that allow access to the management network). All management interfaces of networking devices are only accessible from the management network.",
+   "No, management interfaces for networking devices are accessible from the regular network."
+  ]
+ },
+ {
+  "id": "network_monitoring",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network",
+  "text": "Have you implemented monitoring and alerting for your network?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "network_monitoring_availability",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network / Network Monitoring",
+  "text": "Do you monitor the availability of your network and the devices on it?",
+  "choices": [
+   "Yes, we watch the network for outages, and we alert the right people when issues occur.",
+   "No, the availability of our network is not monitored or not sufficiently monitored."
+  ]
+ },
+ {
+  "id": "network_monitoring_security",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network / Network Monitoring",
+  "text": "Do you monitor your network for security events?",
+  "choices": [
+   "Yes, we monitor for unauthorized access, unexpected behavior, certain attack signatures, and other indicators of a security incident.",
+   "We do not currently have extensive monitoring for security incidents on our network."
+  ]
+ },
+ {
+  "id": "network_monitoring_logging",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network / Network Monitoring",
+  "text": "Do you retain logs produced by networking devices (such as firewalls, routers, DNS servers, DHCP servers, etc.) for at least six months, and do you monitor them regularly?",
+  "choices": [
+   "Yes, we regularly review these logs and retain them in case we need to investigate an incident.",
+   "No, these logs are not retained and/or monitored."
+  ]
+ },
+ {
+  "id": "network_centrallogging",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network / Network Monitoring",
+  "text": "Are the logs produced by networking devices (such as firewalls, DNS servers, DHCP servers, routers, etc.) stored in a central location?",
+  "choices": [
+   "Yes, all devices that support logging write logs to one or more dedicated log systems.",
+   "No, each device stores log files separately."
+  ]
+ },
+ {
+  "id": "network_wifi",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network",
+  "text": "Do you operate wireless networks that allow access to private aspects of your infrastructure (i.e., Wi-Fi networks, excluding networks that only allow guests access to the Internet)?",
+  "choices": [
+   "Yes.",
+   "No, we only have Wi-Fi networks that allow guests to access the Internet; they don't have access to any private aspects of our infrastructure."
+  ]
+ },
+ {
+  "id": null,
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network / Wireless Networking",
+  "text": "How are your wireless networks encrypted? (If you have multiple Wi-Fi networks, choose the weakest encryption that gives access to an internal network.)",
+  "choices": [
+   "No encryption",
+   "WEP",
+   "WPA/WPA2 with a preshared key (WPA[2]-PSK)",
+   "WPA/WPA2 with RADIUS authentication (WPA[2]-Enterprise)"
+  ]
+ },
+ {
+  "id": "network_vpn",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network",
+  "text": "Do you operate a VPN that allows remote access to your network?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": null,
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network / VPN/Remote Network Access",
+  "text": "Is it possible for devices that are not owned and managed by your company to connect to your internal network remotely through VPN?",
+  "choices": [
+   "Yes.",
+   "No, this is prohibited by policy.",
+   "No, this is prevented by technical measures."
+  ]
+ },
+ {
+  "id": "network_outsourced",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network",
+  "text": "Is the management of your network (or parts thereof) outsourced?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "network_outsourced_audits",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Network",
+  "text": "Do you regularly audit your outsourcing provider to ensure compliance with the policies you set, and the use of safe security practices?",
+  "choices": [
+   "Yes, we audit our outsourcing providers at least annually.",
+   "We don't audit our outsourcing providers as often as we probably should."
+  ]
+ },
+ {
+  "id": "servers_hardening",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers",
+  "text": "Do you have operating system hardening in place, or build standards for server systems?",
+  "choices": [
+   "Yes, all of our servers are configured according to these standards.",
+   "We do not have these standards, or we don't apply them uniformly across the fleet."
+  ]
+ },
+ {
+  "id": "servers_hardening_requirements",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Hardening and Build Standards",
+  "text": "Do your hardening and build standards cover the following topics?Removing or disabling all non-essential servicesDisabling all default accounts and/or changing the passwordReview/tightening of permissions for key files and directoriesSetting up loggingSecurely configuring remote access and management interfacesSetting up appropriate host-based firewall rulesSecurely configuring a backup mechanism",
+  "choices": [
+   "Yes, these are all pretty much covered by our standards.",
+   "No, we might have missed a few of these."
+  ]
+ },
+ {
+  "id": "servers_hardening_intandext",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Hardening and Build Standards",
+  "text": "Are your hardening and build standards applied to both internal servers and externally exposed systems, and all services that run on them?",
+  "choices": [
+   "Yes",
+   "No, we apply them only to externally exposed servers."
+  ]
+ },
+ {
+  "id": "servers_hardening_requirements_writing",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Hardening and Build Standards",
+  "text": "Are your hardening and build standards documented?",
+  "choices": [
+   "Yes, we document our hardening and build standards, and we make sure they are consistently applied.",
+   "No, our hardening and build standards haven't been written down."
+  ]
+ },
+ {
+  "id": "servers_configmgmt",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Hardening and Build Standards",
+  "text": "Do you have processes in place for managing the configuration of your servers and services?",
+  "choices": [
+   "Yes, we have processes in place to ensure that configuration updates are deployed consistently across the entire fleet. Our processes are comprehensive, so it's very unlikely that any systems will be overlooked during important configuration changes.",
+   "No, our servers are configured on an ad-hoc basis. The processes for rolling out updates to all of our servers could be improved."
+  ]
+ },
+ {
+  "id": "servers_configmgmt_audit",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Hardening and Build Standards",
+  "text": "Do you review and/or audit your configuration files, to ensure that they conform to your security policies?",
+  "choices": [
+   "Yes, the configuration files of important systems are regularly reviewed or audited.",
+   "No; unless there is a specific reason to look at them, configuration files are rarely reviewed."
+  ]
+ },
+ {
+  "id": "servers_patching",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers",
+  "text": "Do you have a process for installing operating system and application updates and security patches on servers?",
+  "choices": [
+   "Yes, we are very diligent about applying security updates to operating systems and applications.",
+   "No, we don't have a process for patching. Some updates might fall through the cracks."
+  ]
+ },
+ {
+  "id": "servers_patching_schedule_exceptions",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Security Updates and Vulnerabi",
+  "text": "Do you also have an emergency process for installing patches outside of the regular patching schedule when high-risk vulnerabilities are identified?",
+  "choices": [
+   "Yes, we carefully consider the risk associated with each new vulnerability and decide whether the patch should be deployed outside of the regular schedule.",
+   "No, we generally don't deviate from our standard patching schedule, even for critical vulnerabilities."
+  ]
+ },
+ {
+  "id": "servers_patching_tests",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Security Updates and Vulnerabi",
+  "text": "Do you test security patches before you deploy them to your production systems?",
+  "choices": [
+   "Yes, for important servers we have systems that we test patches on before deploying them to production.",
+   "No, patches get deployed directly to production."
+  ]
+ },
+ {
+  "id": "servers_logging",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers",
+  "text": "Are your systems configured to log security-relevant events, such as authentication, data access, etc.?",
+  "choices": [
+   "Yes, we have comprehensive logging, including security events, for all relevant services.",
+   "No, our logging is basic or incidental."
+  ]
+ },
+ {
+  "id": "servers_logging_retention",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Logging",
+  "text": "Do you retain security event logs for at least six months, and do you monitor them regularly?",
+  "choices": [
+   "Yes, we regularly review these logs and retain them in case we need to investigate a security incident.",
+   "No, these logs are not retained and/or monitored."
+  ]
+ },
+ {
+  "id": "servers_logging_central",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Logging",
+  "text": "Are the logs produced by your servers stored in a central location?",
+  "choices": [
+   "Yes, all devices that support logging write logs to one or more dedicated log systems.",
+   "No, each device stores log files separately."
+  ]
+ },
+ {
+  "id": "servers_admin_windows_da_accounts",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Administrative Access / Window",
+  "text": "Do your Windows domain administrators have separate accounts with lower privileges that they use for day-to-day tasks?",
+  "choices": [
+   "Yes. Our domain administrators use their highly privileged accounts only when necessary. For day-to-day tasks, they use regular accounts with fewer privileges.",
+   "No, our domain administrators are usually logged in with their domain-admin accounts for day-to-day work."
+  ]
+ },
+ {
+  "id": "servers_admin_linux_sudo",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Administrative Access / Unix/L",
+  "text": "Do your administrators have personal user accounts and use sudo when elevated privileges are necessary?",
+  "choices": [
+   "Yes, our administrators use sudo (or a similar tool).",
+   "No, our administrators know the root password and log in as root when they need to make changes that require elevated privileges."
+  ]
+ },
+ {
+  "id": "servers_admin_linux_root",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Administrative Access / Unix/L",
+  "text": "Where is the root password kept?",
+  "choices": [
+   "We keep the root password in a secure location (e.g., in an envelope in a safe). It is retrieved only when absolutely necessary. Processes are in place to ensure accountability, and the password is changed after every use.",
+   "We are not quite that protective of root passwords."
+  ]
+ },
+ {
+  "id": "servers_admin_linux_ldap",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Administrative Access / Unix/L",
+  "text": "Are your *nix systems connected to a central directory for managing access (e.g., LDAP)?",
+  "choices": [
+   "Yes. It's easy for us to centrally disable accounts.",
+   "No, we create individual accounts separately on each of our *nix servers."
+  ]
+ },
+ {
+  "id": "servers_admin_auditing",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Administrative Access",
+  "text": "Do you have procedures in place for regularly auditing administrative access to your servers?",
+  "choices": [
+   "Yes, we review the actions our administrators take to make sure we catch issues, such as a compromised account.",
+   "No, we generally don't audit administrative access unless prompted by an issue."
+  ]
+ },
+ {
+  "id": "servers_backup_dcsync",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Backups",
+  "text": "Do you sync data to a different site in near real time?",
+  "choices": [
+   "Yes. If a disaster occurs at one site, very little data will be lost because almost everything will already have been copied to our backup site.",
+   "No, we don't have a backup site, or we don't synchronize data in near real time."
+  ]
+ },
+ {
+  "id": "servers_backup_media",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Backups",
+  "text": "Do you store backups on disks, tapes, or other kinds of removable media?",
+  "choices": [
+   "Yes.",
+   "No."
+  ]
+ },
+ {
+  "id": "servers_backup_media_encryption",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Backups",
+  "text": "Are the backups that are stored on removable media (e.g., disks, tapes, etc.) encrypted?",
+  "choices": [
+   "Yes, we encrypt backups to ensure the safety of data during transport and storage.",
+   "No, backups are not encrypted."
+  ]
+ },
+ {
+  "id": "servers_backup_media_offsite",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Backups",
+  "text": "Do you store backup media in an off-site facility that is protected against potential disaster?",
+  "choices": [
+   "Yes, our backup media is stored in a protected facility that is far enough away from our other facilities to mitigate the impact in the event of a disaster.",
+   "No, backup media is stored on site."
+  ]
+ },
+ {
+  "id": "servers_backup_frequency",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Backups",
+  "text": "Do you have procedures in place for working with customers to determine an appropriate backup frequency?",
+  "choices": [
+   "Yes, we talk to our customers to gather requirements for backup frequency, and we implement backup intervals accordingly.",
+   "No, we have a fixed backup cycle."
+  ]
+ },
+ {
+  "id": "servers_backup_test",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Backups",
+  "text": "Do you regularly test your backups?",
+  "choices": [
+   "Yes, we test the entire process of recovery, including restoring entire systems from backup.",
+   "We don't usually test backups."
+  ]
+ },
+ {
+  "id": "servers_email_third_party",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Email",
+  "text": "Do you use third-party (e.g. hosted email, email marketing services, etc.) email providers?",
+  "choices": [
+   "Yes, we use a third-party email provider for some or all of our email.",
+   "No, we use our own internal email infrastructure (e.g. Microsoft Exchange) for all of our email."
+  ]
+ },
+ {
+  "id": "servers_email_inbound_tls",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Email",
+  "text": "Does your inbound email infrastructure support Transport Layer Security (TLS) 1.2 with cipher suites with forward secrecy (e.g. ECDHE)?",
+  "choices": [
+   "Yes, our inbound SMTP servers support at least TLS 1.2 and cipher suites with forward secrecy for all inbound email.",
+   "No, our inbound SMTP servers do not support encryption or do not meet this level of encryption in transit."
+  ]
+ },
+ {
+  "id": "servers_email_outbound_starttls",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers / Email",
+  "text": "Does your outbound email infrastructure use Opportunistic TLS (STARTTLS) to request remote servers upgrade to an encrypted connection?",
+  "choices": [
+   "Yes, our outbound SMTP servers will upgrade to an encrypted connection if the STARTTLS extension is available.",
+   "No, our outbound SMTP servers do not support STARTTLS."
+  ]
+ },
+ {
+  "id": "servers_outsourced",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers",
+  "text": "Is the management of your servers (or parts thereof) outsourced?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "servers_outsourced_audits",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Servers",
+  "text": "Do you regularly audit your outsourcing provider to ensure compliance with the policies you set, and the use of safe security practices?",
+  "choices": [
+   "Yes, we audit our outsourcing providers at least annually.",
+   "We don't audit our outsourcing providers quite as often as we probably should."
+  ]
+ },
+ {
+  "id": "clients_hardening",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.)",
+  "text": "Do you have operating system hardening and/or build standards for client systems?",
+  "choices": [
+   "Yes, all of our client systems are configured according to these standards, and/or they are built from standard images that comply with our hardening guidelines.",
+   "We do not have hardening or build standards, or we don't apply them uniformly across the fleet."
+  ]
+ },
+ {
+  "id": "clients_hardening_requirements",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.) / H",
+  "text": "Do your hardening and build standards cover the following topics?Removing or disabling all non-essential servicesDisabling guest and default accountsReview/tightening of permissions for key files and directoriesSetting up loggingSetting up appropriate host-based firewall rulesConfiguring anti-malware toolsSecurely configuring VPN client software (where appropriate)Ensuring the security of local administrative accountsSetting up whole-disk encryption",
+  "choices": [
+   "Yes, these are all pretty much covered by our standards.",
+   "No, we might have missed a few of these."
+  ]
+ },
+ {
+  "id": "clients_configmgmt",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.) / H",
+  "text": "Do you have processes in place for managing the configuration of your client systems?",
+  "choices": [
+   "Yes, we have processes in place to ensure that configuration updates are deployed consistently across the entire fleet, covering all operating systems provided to users. Our processes are comprehensive, so it's very unlikely that any systems will be overlooked during important configuration changes.",
+   "No, our client systems are configured on an ad-hoc basis. The processes for rolling out updates to all of our client systems could be improved."
+  ]
+ },
+ {
+  "id": "clients_standardbuild_audit",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.) / H",
+  "text": "Do you review and/or audit the standard builds that form the basis of your client fleet, to ensure that they conform to your security policies and requirements?",
+  "choices": [
+   "Yes, standard builds are regularly reviewed or audited.",
+   "No, unless there is a specific reason to look at them, the standard builds are rarely reviewed."
+  ]
+ },
+ {
+  "id": "clients_patching",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.)",
+  "text": "Do you have a process for installing operating system and application updates and security patches on client systems?",
+  "choices": [
+   "Yes, we diligently apply security updates to operating systems and applications.",
+   "No, we don't have a process for patching. Some updates might fall through the cracks."
+  ]
+ },
+ {
+  "id": "clients_patching_schedule_exceptions",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.) / S",
+  "text": "Do you also have an emergency process for installing patches outside of the regular schedule when high-risk vulnerabilities are identified?",
+  "choices": [
+   "Yes, we carefully consider the risk associated with each vulnerability and decide whether the patch should be deployed outside of the regular schedule.",
+   "No, we generally don't deviate from our standard patching schedule, even for critical vulnerabilities.."
+  ]
+ },
+ {
+  "id": "clients_av",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.)",
+  "text": "Do you have controls in place to protect client systems from malware?",
+  "choices": [
+   "Yes, we regularly scan our client systems for known malware, or we limit client systems to whitelisted software identified by cryptographic hashes.",
+   "Some systems in our client fleet may not be fully protected."
+  ]
+ },
+ {
+  "id": "clients_logging",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.)",
+  "text": "Are your client systems configured to log security-relevant events, such as authentication, data access, etc.?",
+  "choices": [
+   "Yes, we have comprehensive logging enabled on client systems, including security events.",
+   "No, our logging is basic or incidental."
+  ]
+ },
+ {
+  "id": "clients_logging_retention",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.) / L",
+  "text": "Do you retain client system security event logs for at least three months?",
+  "choices": [
+   "Yes, we keep them around in case we need to investigate an incident.",
+   "No, these logs are not retained for three months."
+  ]
+ },
+ {
+  "id": "clients_logging_central",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.) / L",
+  "text": "Are the logs produced by your client systems stored in a central location?",
+  "choices": [
+   "Yes, all devices that support logging write logs to one or more dedicated log systems.",
+   "No, each device stores log files separately."
+  ]
+ },
+ {
+  "id": "clients_admin_restricted",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.)",
+  "text": "What level of access do regular users have on their workstation/laptop?",
+  "choices": [
+   "Regular users have (unprivileged) user access on their machines. We have a process in place for granting local administrative access to users who demonstrate a clear need.",
+   "Users are local administrators on their machines."
+  ]
+ },
+ {
+  "id": "clients_admin_samepassword",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.)",
+  "text": "Do all clients use the same local administrator/root password?",
+  "choices": [
+   "Yes, the local root or administrator password is the same for all (or many) client systems.",
+   "No, local Administrator/root accounts are disabled, or a different password is set for all machines."
+  ]
+ },
+ {
+  "id": "clients_winxp",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.)",
+  "text": "One major risk factor in many corporate environments is the use of older versions of Windows. Does your company still have systems running Windows Vista or earlier versions?",
+  "choices": [
+   "Yes, some or all of our client machines still run Windows Vista or earlier versions.",
+   "No, our client machines do not run Windows Vista or earlier versions. Legacy installations have been completely separated from our main infrastructure and cannot access any of your information."
+  ]
+ },
+ {
+  "id": "clients_laptops_hd_encrypted",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.) / E",
+  "text": "Do you fully encrypt the hard disks of laptops and other portable client devices?",
+  "choices": [
+   "Yes, we use full-disk encryption for our laptop fleet.",
+   "No, laptop hard disks are not fully encrypted. Users are responsible for protecting sensitive information on laptops."
+  ]
+ },
+ {
+  "id": "clients_mobile_phones",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.) / E",
+  "text": "Do you allow access to confidential information (e.g., email) from unencrypted mobile devices such as phones and tablets?",
+  "choices": [
+   "Yes, our users can sync potentially confidential information like email onto their mobile phones or tablets.",
+   "No, we do not allow access to corporate information from unencrypted devices such as mobile phones or tablets."
+  ]
+ },
+ {
+  "id": "clients_workstation_hd_encrypted",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.) / E",
+  "text": "Do you fully encrypt the hard disks of workstations and other devices in the office that have access to our confidential information?",
+  "choices": [
+   "Yes, our workstations use full-disk encryption.",
+   "No, devices that cannot be brought outside the office are generally unencrypted, even if they provide access to confidential information."
+  ]
+ },
+ {
+  "id": "clients_media_encryption",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Clients (Workstation, Laptops, etc.) / E",
+  "text": "Do you require users to encrypt confidential information on mobile media such as external hard drives, thumb drives, DVDs, etc., and do you provide them with adequate tools?",
+  "choices": [
+   "Yes, any information that goes on mobile media is encrypted.",
+   "No, we should establish better requirements for encryption of mobile media."
+  ]
+ },
+ {
+  "id": "testing_pentests",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Technical Security Testing",
+  "text": "Does an independent third party regularly perform penetration tests on all systems used to provide services to customers?",
+  "choices": [
+   "Yes.",
+   "No, we rarely or never have independent third parties do penetration tests."
+  ]
+ },
+ {
+  "id": "testing_pentests_manual",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Technical Security Testing / 3rd Party P",
+  "text": "Many vulnerabilities cannot be found by automated scanners. Do the penetration tests include manual security testing?",
+  "choices": [
+   "Yes, the experts we hire use both automated and manual testing methods.",
+   "No, the penetration testing is fully automated."
+  ]
+ },
+ {
+  "id": null,
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Technical Security Testing / 3rd Party P",
+  "text": "How often (on average) are penetration tests done for the scope you described?",
+  "choices": [
+   "Multiple times per year.",
+   "Annually.",
+   "Less frequently."
+  ]
+ },
+ {
+  "id": "testing_pentests_sharesummary",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Technical Security Testing / 3rd Party P",
+  "text": "Are you willing to share a management summary of the most recent penetration testing reports?",
+  "choices": [
+   "Yes, if this helps to accelerate the partner audit process, we're willing to share them under NDA.",
+   "No, this information is considered confidential and is not shared even under NDA."
+  ]
+ },
+ {
+  "id": "testing_scans",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Technical Security Testing",
+  "text": "Are all of the systems used in this project scanned for host-level vulnerabilities? (Note: This question does not refer to anti-malware scans. Instead, it refers to scans that look for known vulnerabilities and misconfiguration of the software running on servers.)",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": null,
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Technical Security Testing / Security Sc",
+  "text": "How often do you run vulnerability scans?",
+  "choices": [
+   "Once per month or more often",
+   "Once per quarter",
+   "Less frequently"
+  ]
+ },
+ {
+  "id": "testing_scans_intext",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Technical Security Testing / Security Sc",
+  "text": "Which systems are covered by the security scans?",
+  "choices": [
+   "Both internal systems and externally exposed systems are regularly scanned.",
+   "Our scans cover only those systems that are exposed on the Internet."
+  ]
+ },
+ {
+  "id": "testing_inhouse",
+  "source": "infrastructure",
+  "section": "Infrastructure Security Questionnaire / Technical Security Testing",
+  "text": "In addition to third-party penetration tests and security scans, do you have security know-how internally, and do you use that know-how to conduct in-house security testing?",
+  "choices": [
+   "Yes, our security team does technical security reviews of the systems used for this project.",
+   "No, we don't do in-house security testing."
+  ]
+ },
+ {
+  "id": "office_facilities_excl",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Security at the Office",
+  "text": "Are all facilities used exclusively by your company, or are some shared?",
+  "choices": [
+   "Yes, we are the only tenant of the facilities.",
+   "No, some or all of the facilities are shared with other companies.",
+   "We don't have offices; everyone works from home."
+  ]
+ },
+ {
+  "id": "office_ra",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Security at the Office",
+  "text": "Does your company review the physical and environmental risks that your office facilities are exposed to, and do you have procedures in place to evaluate and, if necessary, address them?",
+  "choices": [
+   "Yes, we do risk assessments to proactively identify risks related to physical and environmental security.",
+   "No, we don't review physical and environmental risks."
+  ]
+ },
+ {
+  "id": "office_policy",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Security at the Office",
+  "text": "Do you have a written policy that lists the physical security requirements for office facilities?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "office_access",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Security at the Office / Access ",
+  "text": "Do you have an auditable process in place for granting and revoking physical access to office facilities?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "office_acclogs",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Security at the Office / Access ",
+  "text": "Are physical entry logs kept for at least six months?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": null,
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Security at the Office / Access ",
+  "text": "How often do you review physical entry logs?",
+  "choices": [
+   "Never",
+   "Every couple of months",
+   "Once per month",
+   "More often"
+  ]
+ },
+ {
+  "id": "office_network_room",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Security at the Office",
+  "text": "Offices need a lot of networking equipment. If an attacker manages to gain access to such equipment, they could, for example, do a man-in-the-middle attack for all office traffic. It's important to protect access to network equipment like floor distributor switches, office routers, wireless APs, etc.",
+  "choices": [
+   "All of these are well protected and locked away. Only a few IT employees have physical access to networking equipment.",
+   "We don't protect access to office networking equipment."
+  ]
+ },
+ {
+  "id": "dc_facilities_excl",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Data Center Security / Running O",
+  "text": "Are all facilities used exclusively by your company, or are some shared?",
+  "choices": [
+   "Yes, we are the only user of all data centers that potentially store confidential data.",
+   "No, some or all of the facilities are shared with other companies."
+  ]
+ },
+ {
+  "id": "dc_policy",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Data Center Security / Running O",
+  "text": "Do you have a written policy that lists the physical security requirements for data centers?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "dc_testing",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Data Center Security / Running O",
+  "text": "Are all of the controls you selected above tested at least annually?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "dc_monitoring",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Data Center Security / Running O",
+  "text": "Do all data centers have monitoring and alerting in place for power supply, HVAC, and temperature?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "dc_access",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Data Center Security / Running O",
+  "text": "Do you have an auditable process in place for granting and revoking physical access to data centers?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "dc_acclogs",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Data Center Security / Running O",
+  "text": "Are physical entry logs kept for at least six months?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": null,
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Data Center Security / Running O",
+  "text": "How often do you review physical entry logs?",
+  "choices": [
+   "Never",
+   "Every couple of months",
+   "Once per month",
+   "More often"
+  ]
+ },
+ {
+  "id": "dc_outage",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Data Center Security / Running O",
+  "text": "Even the most advanced and protected data centers have occasional outages. Depending on the availability requirements of your project, it might be necessary to quickly switch to another data center so that operations can be resumed without excessive downtime.",
+  "choices": [
+   "We are able to quickly route traffic to another data center (within one hour).",
+   "We would need more than one hour to resume our service in case of a data center outage."
+  ]
+ },
+ {
+  "id": "dc_ra",
+  "source": "physical_and_datacenter",
+  "section": "Physical & Data Center Security Questionnaire / Data Center Security / Running O",
+  "text": "Does your company review the physical and environmental risks that your data centers are exposed to, and do you have procedures in place to evaluate and, if necessary, address them?",
+  "choices": [
+   "Yes, we do risk assessments or &mdash; if hosted with a colocation provider &mdash; review our provider's security practices.",
+   "No, we don't."
+  ]
+ },
+ {
+  "id": "secprog",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy",
+  "text": "Does your company have a strong, established security program, and does the scope of the program include all information processed as part of this project?",
+  "choices": [
+   "Yes, our security program covers all aspects of information security for this project.",
+   "No, our security program is more limited."
+  ]
+ },
+ {
+  "id": "secprog_standard",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Security an",
+  "text": "Standards and guidelines are available for security and privacy programs. Complying with a generally accepted standard helps your customers assess the controls and safeguards that make up your program.Examples of standards include ISO 27001, PCI DSS, and SSAE 16.",
+  "choices": [
+   "Our security program is based on a recognized security standard, and it can easily be audited against that.",
+   "We implement our own security program, not based on any recognized standard or guideline."
+  ]
+ },
+ {
+  "id": "secprog_allinscope",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Security an",
+  "text": "Information security and privacy standards are often limited to specific operations, services, or systems. For example, a PCI DSS compliance program may be limited to only those operations that involve the processing of payment card information.Does your information security and privacy program cover all of your operations, services, and systems that involve access to confidential information?",
+  "choices": [
+   "Yes, both the processes that directly deal with customer data (such as IT) and the processes that might indirectly affect the security of customer data (such as HR processes) are in scope.",
+   "No, our compliance with these standards is limited."
+  ]
+ },
+ {
+  "id": "secprog_team",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Security an",
+  "text": "Has your company selected an individual or team to be responsible for managing the information security and privacy program?",
+  "choices": [
+   "Yes, management has selected an individual or team to be responsible for the information security and privacy program.",
+   "No, there is no ownership for security and privacy in the company."
+  ]
+ },
+ {
+  "id": null,
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Security an",
+  "text": "Security and privacy policies are most valuable if they are kept current. You should regularly update your policies to reflect changes in processes and security requirements, as well as in response to the threats your company is exposed to. How often does your company review its security and privacy policies to ensure they are up to date?",
+  "choices": [
+   "Immediately whenever something important changes.",
+   "Multiple times per year.",
+   "Once per year.",
+   "Less frequently."
+  ]
+ },
+ {
+  "id": null,
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Internal As",
+  "text": "How often are internal information security and privacy audits performed?",
+  "choices": [
+   "Quarterly or more often.",
+   "At least annually.",
+   "Less frequently."
+  ]
+ },
+ {
+  "id": "secprog_intaudits_scope",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Internal As",
+  "text": "Does the scope of your internal assessment include the entire security and privacy program, as well as all operations, services, and systems that involve access to the customer data or systems that are used in this project?",
+  "choices": [
+   "Yes.",
+   "No, the assessments are limited."
+  ]
+ },
+ {
+  "id": "secprog_intaudits_std",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Internal As",
+  "text": "Does your internal assessment audit your company's compliance with any specific information security or privacy standards?",
+  "choices": [
+   "Yes.",
+   "No."
+  ]
+ },
+ {
+  "id": null,
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Third-Party",
+  "text": "How often does an independent third party perform audits of your security and privacy program? (Note: this should not include penetration tests or other technical assessments; rather, it refers to security reviews of your organizational processes, procedures, and policies.)",
+  "choices": [
+   "Quarterly or more often.",
+   "Annually.",
+   "Less frequently."
+  ]
+ },
+ {
+  "id": "secprog_extaudits_scope",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Third-Party",
+  "text": "Does the scope of these third party audits include the entire security and privacy program, as well as all operations, services, and systems that involve access to sensitive information or systems?",
+  "choices": [
+   "Yes.",
+   "No, the audits are limited."
+  ]
+ },
+ {
+  "id": "secprog_extaudits_std",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Third-Party",
+  "text": "Does the independent audit including checking your company's compliance with any specific information security or privacy standard?",
+  "choices": [
+   "Yes.",
+   "No."
+  ]
+ },
+ {
+  "id": "secprog_extaudits_sharereports",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Third-Party",
+  "text": "Are you willing to share a management summary of the most recent audit reports?",
+  "choices": [
+   "Yes.",
+   "No."
+  ]
+ },
+ {
+  "id": null,
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Risk Assess",
+  "text": "Under your risk management process, how often are risk assessments reviewed and updated?",
+  "choices": [
+   "Multiple times per year.",
+   "Once per year.",
+   "Less frequently."
+  ]
+ },
+ {
+  "id": "secprog_vendorsec_owner",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Partner Sec",
+  "text": "Has your company selected an individual or team to be responsible for reviewing service providers and subcontractors, to ensure that they sufficiently protect the security and privacy of sensitive information and systems?",
+  "choices": [
+   "Yes.",
+   "No."
+  ]
+ },
+ {
+  "id": "secprog_vendorsec_clauses",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Partner Sec",
+  "text": "Do your written contracts with relevant third parties require them to adequately protect the privacy and security of all confidential information they may get access to during the partnership?",
+  "choices": [
+   "Yes, we require all our outsourcing providers, vendors, and subcontractors to agree to contract clauses that assert security requirements.",
+   "No, not all vendors that are potentially exposed to confidential information have agreed to security requirements contractually."
+  ]
+ },
+ {
+  "id": "secprog_changemgmt_documented",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Change Mana",
+  "text": "Is your change management process formally documented, and does it classify changes by impact and size?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "secprog_changemgmt_secrep",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Change Mana",
+  "text": "Does your change review board include representatives from the teams that are responsible for security and privacy?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "secprog_changemgmt_records",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Change Mana",
+  "text": "Do you retain records and documentation about the changes that go through change management?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "secprog_incidents_procedures",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Security an",
+  "text": "Are incident response procedures documented?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "secprog_incidents_knowhow",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Security an",
+  "text": "Do you have the resources to internally conduct incident investigations?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "secprog_incidents_inform",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Security an",
+  "text": "Do you inform affected customers about security incidents?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "secprog_peopleops_jobdesc",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Personnel S",
+  "text": "Do you have written job descriptions for employees with access to confidential or sensitive information?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "secprog_peopleops_needtoknow",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Personnel S",
+  "text": "Do you have processes in place to ensure that access to data is granted solely on a \"need-to-know\" basis, in accordance with the job descriptions and responsibilities of users? Do these processes also revoke access when the need no longer exists?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "secprog_peopleops_disciplinary_process",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Personnel S",
+  "text": "Do you have a disciplinary process in place for handling policy violations?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "secprog_peopleops_leaver",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Personnel S",
+  "text": "Do you have processes in place to make sure access (both physical and logical) is revoked when an employee, intern, vendor, contractor, or other associate leaves the company or a contract ends? Note that in many cases it is not sufficient to just disable the main LDAP or Active Directory account. Many employees have access to information that is governed by additional credentials, such as data in software-as-a-service applications.",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": null,
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Personnel S",
+  "text": "How often do you require your employees to undergo information security and privacy training?",
+  "choices": [
+   "Never.",
+   "Once, upon hire.",
+   "Upon hire, and at least once per year."
+  ]
+ },
+ {
+  "id": "secprog_train_tvc",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Personnel S",
+  "text": "Do you require temps, interns, and contractors to undergo security and privacy training?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ },
+ {
+  "id": "secprog_background_checks",
+  "source": "security_privacy_programs",
+  "section": "Security and Privacy Programs Questionnaire / Security and Privacy / Personnel S",
+  "text": "Do you perform background checks for personnel who are entrusted with sensitive information or granted access to sensitive systems?",
+  "choices": [
+   "Yes",
+   "No"
+  ]
+ }
+]
