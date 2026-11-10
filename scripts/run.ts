@@ -46,7 +46,7 @@ if (all) {
 }
 
 const client = new RecordingClient(new LiveClient());
-const runId = `${pack}-${all ? 'all' : 'demo'}-v1`;
+const runId = `${pack}-${all ? 'all' : 'demo'}-v2`;
 const t0 = Date.now();
 let done = 0;
 const results = await answerAll(questions, passages, client, { ...DEFAULT_OPTIONS, runId }, 3, (r) => {

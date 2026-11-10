@@ -1,6 +1,6 @@
 ## Halden Labs
 
-40 questions, 271 Clocked calls, 751 credits, 32 s with 3 questions in flight.
+40 questions, 271 Clocked calls, 659 credits, 41 s with 3 questions in flight.
 
 Outcome: answered 29, owner 8, set_aside 3.
 

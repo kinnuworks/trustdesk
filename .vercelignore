@@ -1,0 +1,13 @@
+.env
+.env.*
+STATE.md
+HACKATHON.md
+CLAUDE.md
+SETUP.md
+judge.sh
+stranger.sh
+judging/
+docs-ref/
+gitignore-add.txt
+eval/*.log
+.claude/
