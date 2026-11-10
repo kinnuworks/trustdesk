@@ -1,4 +1,8 @@
-:root { --bg: #fff; --fg: #1b1d21; --muted: #6b7078; --line: #e3e5e8; --card: #f7f8f9; --ok: #1d7a46; --okbg: #dcefe3; --warn: #a15c00; --bad: #b42318; --mark: #fff1a8;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg); background: var(--bg); }
-@media (prefers-color-scheme: dark) { :root { --bg: #121417; --fg: #e8eaed; --muted: #9aa0a6; --line: #2c3036; --card: #1a1d21; --ok: #5cc78a; --okbg: #1f3a2a; --warn: #e3a34a; --bad: #f2786c; --mark: #5a4d12; } }
-body { margin: 0; background: var(--bg); }
+/* App-specific tokens on top of the design system. Status colours carry meaning and nothing else. */
+:root{
+  --st-ok:#1F7A3D; --st-ok-wash:#E6F4EA;
+  --st-own:#9A5200; --st-own-wash:#FFF1DC;
+  --st-set:#5B5B60; --st-set-wash:#EEEEF0;
+  --st-fail:#B3261E; --st-fail-wash:#FDE7E5;
+  --mark-hl:#FFF0A8;
+}
