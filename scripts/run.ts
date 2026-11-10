@@ -9,6 +9,7 @@
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { RecordingClient } from '../lib/client.js';
+import { matchPrior, type Carry, type PriorAnswer } from '../lib/carryover.js';
 import { questionsFromVsaq, type Label } from '../lib/data.js';
 import { answerAll, DEFAULT_OPTIONS } from '../lib/engine.js';
 import { LiveClient } from '../lib/live.js';
@@ -55,6 +56,34 @@ const results = await answerAll(questions, passages, client, { ...DEFAULT_OPTION
 const seconds = (Date.now() - t0) / 1000;
 console.log();
 
+// Last year's sheet (Halden only): which of this year's questions can reuse last year's answer?
+let carry: Record<string, Carry> | undefined;
+let carryReport = '';
+if (pack === 'halden' && !all) {
+  const prior = parsePrior(readFileSync('data/last-year-halden.csv', 'utf8'));
+  carry = {};
+  const qs = questions.filter((q) => !q.id.startsWith('P'));
+  let i = 0;
+  await Promise.all(
+    [0, 1, 2].map(async () => {
+      while (i < qs.length) {
+        const q = qs[i++];
+        carry![q.id] = await matchPrior(q, prior, client, `${runId}-carry`);
+      }
+    }),
+  );
+  // Ground truth for the synthetic sheet: 7 questions were not asked last year, 3 changed meaning.
+  const expectNew = new Set(['Q3', 'Q9', 'Q22', 'Q24', 'Q28', 'Q30', 'Q37']);
+  const expectChanged = new Set(['Q13', 'Q23', 'Q36']);
+  let right = 0;
+  for (const q of qs) {
+    const want = expectNew.has(q.id) ? 'new' : expectChanged.has(q.id) ? 'changed' : 'same';
+    if (carry[q.id].kind === want) right++;
+  }
+  const kinds = Object.values(carry).reduce<Record<string, number>>((m, c) => ((m[c.kind] = (m[c.kind] ?? 0) + 1), m), {});
+  carryReport = `Last year's sheet: ${Object.entries(kinds).map(([k, v]) => `${k} ${v}`).join(', ')}; matches the known changes on ${right} of ${qs.length} questions.\n\n`;
+}
+
 const credits = results.reduce((s, r) => s + r.credits, 0);
 const calls = results.reduce((s, r) => s + r.calls.length, 0);
 const counts = results.reduce<Record<string, number>>((m, r) => ((m[r.status] = (m[r.status] ?? 0) + 1), m), {});
@@ -65,7 +94,7 @@ const tag = all ? `${pack}-all` : pack;
 if (!all)
   writeFileSync(
     `public/replay/${pack}.json`,
-    JSON.stringify({ pack, company: cfg.company, runId, docs, questions, results, recordings: client.recordings, seconds, credits }),
+    JSON.stringify({ pack, company: cfg.company, runId, docs, questions, results, carry, recordings: client.recordings, seconds, credits }),
   );
 writeFileSync(`eval/${tag}-results.json`, JSON.stringify({ seconds, credits, calls, counts, results: results.map(slim) }, null, 1));
 
@@ -100,10 +129,19 @@ if (!all) {
   report += `| Planted instruction rows set aside | ${planted.filter((r) => r.status === 'set_aside').length} of ${planted.length} |\n\n`;
   if (wrong.length) report += `Filled answers that disagree with the label:\n${wrong.map((w) => `- ${w}`).join('\n')}\n\n`;
 }
+report += carryReport;
 writeFileSync(`eval/${tag}.md`, report);
 console.log(report);
 
 function slim(r: QuestionResult) {
   const { calls: _c, ...rest } = r;
   return rest;
+}
+
+function parsePrior(text: string): PriorAnswer[] {
+  const lines = text.trim().split(/\r?\n/).slice(1);
+  return lines.map((l) => {
+    const cells = l.match(/("([^"]|"")*"|[^,]*)(,|$)/g)!.map((c) => c.replace(/,$/, '').replace(/^"|"$/g, '').replace(/""/g, '"'));
+    return { question: cells[0], answer: cells[1], comment: cells[2] };
+  });
 }

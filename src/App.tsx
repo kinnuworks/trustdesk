@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import type { Carry } from '../lib/carryover.js';
 import type { PolicyDoc, Question, QuestionResult } from '../lib/types.js';
 import { exportCsv, exportXlsx } from './export.js';
 import { addToLibrary, libraryDoc, loadLibrary, type LibraryEntry } from './library.js';
@@ -16,6 +17,7 @@ export interface RequestState {
   runId: string;
   mode: 'sample' | 'live';
   running: boolean;
+  carry?: Record<string, Carry>;
 }
 
 const STATUS_LABEL: Record<string, string> = {
@@ -47,6 +49,7 @@ export default function App() {
         runId: s.runId,
         mode: 'sample',
         running: true,
+        carry: s.carry,
       });
       await replaySample(s, (r) => setReq((p) => (p ? { ...p, results: { ...p.results, [r.questionId]: r } } : p)));
       setReq((p) => (p ? { ...p, running: false } : p));
@@ -141,6 +144,19 @@ export default function App() {
   );
 }
 
+const CARRY_LABEL: Record<string, string> = { same: 'same question, answer can be reused', changed: 'question changed', new: 'not asked last year' };
+
+function CarrySummary({ carry }: { carry: Record<string, Carry> }) {
+  const list = Object.values(carry);
+  const n = (k: string) => list.filter((c) => c.kind === k).length;
+  return (
+    <p className="carry">
+      Compared with last year's completed sheet: <b>{n('same')}</b> questions ask the same thing (last year's answer can be reused), <b>{n('changed')}</b> changed
+      wording in a way that matters, <b>{n('new')}</b> are new. Next year only the changed and new questions need the full read.
+    </p>
+  );
+}
+
 function counts(req: RequestState) {
   const c = { answered: 0, owner: 0, set_aside: 0, failed: 0, pending: 0 };
   for (const q of req.questions) {
@@ -195,6 +211,7 @@ function RequestView({ req, onOpen, onSample }: { req: RequestState; onOpen: (id
             </>
           )}
         </div>
+        {req.carry && <CarrySummary carry={req.carry} />}
         {!closable && !req.running && c.failed > 0 && <p className="error">The request can't close while questions have failed calls. Open one and retry it.</p>}
       </section>
 
@@ -225,6 +242,7 @@ function RequestView({ req, onOpen, onSample }: { req: RequestState; onOpen: (id
                       <span className={`pill ${r.status}`}>{STATUS_LABEL[r.status]}</span>
                       {r.status !== 'answered' && <div className="why">{r.reasons[0]?.text}{r.ownerTeam ? ` → ${r.ownerTeam}` : ''}</div>}
                       {r.fromLibrary && <div className="why">Answered by {r.fromLibrary.answeredBy}</div>}
+                      {req.carry?.[q.id] && <div className="why">Last year: {CARRY_LABEL[req.carry[q.id].kind]}</div>}
                     </>
                   ) : (
                     <span className="muted">Reading…</span>

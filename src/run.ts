@@ -1,6 +1,7 @@
 import { ReplayClient, type Recording } from '../lib/client.js';
 import { answerAll, DEFAULT_OPTIONS } from '../lib/engine.js';
 import { chunkPolicies } from '../lib/policies.js';
+import type { Carry } from '../lib/carryover.js';
 import type { PolicyDoc, Question, QuestionResult } from '../lib/types.js';
 
 export interface SampleRun {
@@ -10,6 +11,7 @@ export interface SampleRun {
   docs: PolicyDoc[];
   questions: Question[];
   results: QuestionResult[];
+  carry?: Record<string, Carry>;
   recordings: Recording[];
   seconds: number;
   credits: number;
