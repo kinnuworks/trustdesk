@@ -1,11 +1,11 @@
 {
- "seconds": 132.657,
- "credits": 2508,
- "calls": 893,
+ "seconds": 136.428,
+ "credits": 2333,
+ "calls": 895,
  "counts": {
   "answered": 57,
-  "owner": 92,
-  "set_aside": 3
+  "owner": 94,
+  "set_aside": 1
  },
  "results": [
   {
@@ -92,11 +92,11 @@
     }
    ],
    "injection": {
-    "score": 0.003851062701799135,
+    "score": 0.004130143096162109,
     "verdict": "benign"
    },
    "credits": 18,
-   "ms": 3015,
+   "ms": 3215,
    "evidenceAll": [
     "External researchers can report vulnerabilities to security@halden.example."
    ],
@@ -190,11 +190,11 @@
     }
    ],
    "injection": {
-    "score": 0.07645388579122037,
+    "score": 0.005983629855277228,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 2907
+   "credits": 16,
+   "ms": 2982
   },
   {
    "questionId": "V3",
@@ -280,11 +280,11 @@
     }
    ],
    "injection": {
-    "score": 0.003731585227628398,
+    "score": 0.005315812879929327,
     "verdict": "benign"
    },
    "credits": 18,
-   "ms": 3386,
+   "ms": 3410,
    "evidenceAll": [
     "The TLS configuration is reviewed every quarter and only modern cipher suites are enabled."
    ],
@@ -373,11 +373,11 @@
     }
    ],
    "injection": {
-    "score": 0.00259601587686098,
+    "score": 0.0041143642265205616,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2280
+   "credits": 14,
+   "ms": 2311
   },
   {
    "questionId": "V5",
@@ -458,11 +458,11 @@
     }
    ],
    "injection": {
-    "score": 0.00410095650352682,
+    "score": 0.0036208261990656743,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1409
+   "credits": 8,
+   "ms": 1494
   },
   {
    "questionId": "V6",
@@ -552,11 +552,11 @@
     }
    ],
    "injection": {
-    "score": 0.005890012458793281,
+    "score": 0.0039454068088267125,
     "verdict": "benign"
    },
-   "credits": 17,
-   "ms": 2825
+   "credits": 14,
+   "ms": 2244
   },
   {
    "questionId": "V7",
@@ -643,11 +643,11 @@
     }
    ],
    "injection": {
-    "score": 0.003743513881569571,
+    "score": 0.00403763361571674,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2178
+   "credits": 12,
+   "ms": 2682
   },
   {
    "questionId": "V8",
@@ -736,11 +736,11 @@
     }
    ],
    "injection": {
-    "score": 0.049465890131556334,
+    "score": 0.00952020564211975,
     "verdict": "benign"
    },
-   "credits": 21,
-   "ms": 2615
+   "credits": 20,
+   "ms": 2782
   },
   {
    "questionId": "V9",
@@ -821,11 +821,11 @@
     }
    ],
    "injection": {
-    "score": 0.0030887940008409442,
+    "score": 0.0044129142666358145,
     "verdict": "benign"
    },
-   "credits": 7,
-   "ms": 1100
+   "credits": 6,
+   "ms": 1167
   },
   {
    "questionId": "V10",
@@ -906,11 +906,11 @@
     }
    ],
    "injection": {
-    "score": 0.006262922876610011,
+    "score": 0.004872733910065152,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1583
+   "credits": 7,
+   "ms": 1229
   },
   {
    "questionId": "V11",
@@ -991,11 +991,11 @@
     }
    ],
    "injection": {
-    "score": 0.004109892487141331,
+    "score": 0.007319537919518226,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1367
+   "credits": 8,
+   "ms": 1206
   },
   {
    "questionId": "V12",
@@ -1081,11 +1081,11 @@
     }
    ],
    "injection": {
-    "score": 0.006858759034022666,
+    "score": 0.003664331621620387,
     "verdict": "benign"
    },
    "credits": 20,
-   "ms": 3143,
+   "ms": 3279,
    "evidenceAll": [
     "Customer-facing passwords must be at least 12 characters and are checked against a list of breached passwords."
    ],
@@ -1170,11 +1170,11 @@
     }
    ],
    "injection": {
-    "score": 0.004083102232322333,
+    "score": 0.0043930997256349524,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1500
+   "credits": 8,
+   "ms": 1227
   },
   {
    "questionId": "V14",
@@ -1260,11 +1260,11 @@
     }
    ],
    "injection": {
-    "score": 0.0031284974253986686,
+    "score": 0.003834150689149718,
     "verdict": "benign"
    },
-   "credits": 17,
-   "ms": 2760,
+   "credits": 19,
+   "ms": 3393,
    "evidenceAll": [
     "Customer-facing passwords must be at least 12 characters and are checked against a list of breached passwords."
    ],
@@ -1358,11 +1358,11 @@
     }
    ],
    "injection": {
-    "score": 0.004340507087671863,
+    "score": 0.004394066711051359,
     "verdict": "benign"
    },
-   "credits": 27,
-   "ms": 2947,
+   "credits": 22,
+   "ms": 3968,
    "evidenceAll": [
     "Passwords are stored only as salted hashes using bcrypt."
    ],
@@ -1447,11 +1447,11 @@
     }
    ],
    "injection": {
-    "score": 0.004180844101738912,
+    "score": 0.003983987588024984,
     "verdict": "benign"
    },
-   "credits": 8,
-   "ms": 1310
+   "credits": 7,
+   "ms": 1512
   },
   {
    "questionId": "V17",
@@ -1532,11 +1532,11 @@
     }
    ],
    "injection": {
-    "score": 0.002723330429690307,
+    "score": 0.0035001662800386857,
     "verdict": "benign"
    },
    "credits": 9,
-   "ms": 1511
+   "ms": 1748
   },
   {
    "questionId": "V18",
@@ -1617,11 +1617,11 @@
     }
    ],
    "injection": {
-    "score": 0.0031478193717797698,
+    "score": 0.0041713047557527805,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1216
+   "credits": 8,
+   "ms": 1468
   },
   {
    "questionId": "V19",
@@ -1707,11 +1707,11 @@
     }
    ],
    "injection": {
-    "score": 0.0034684403511863193,
+    "score": 0.0033130463949881945,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2813,
+   "credits": 18,
+   "ms": 3359,
    "evidenceAll": [
     "User sessions in the Halden web application expire after 30 minutes of inactivity."
    ],
@@ -1796,11 +1796,11 @@
     }
    ],
    "injection": {
-    "score": 0.003944496526235852,
+    "score": 0.0026942409994769045,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1378
+   "credits": 8,
+   "ms": 1455
   },
   {
    "questionId": "V21",
@@ -1881,11 +1881,11 @@
     }
    ],
    "injection": {
-    "score": 0.002995367262551785,
+    "score": 0.003682968735445047,
     "verdict": "benign"
    },
    "credits": 8,
-   "ms": 1316
+   "ms": 1535
   },
   {
    "questionId": "V22",
@@ -1966,11 +1966,11 @@
     }
    ],
    "injection": {
-    "score": 0.016236607211833398,
+    "score": 0.005497313363912459,
     "verdict": "benign"
    },
    "credits": 9,
-   "ms": 1496
+   "ms": 1445
   },
   {
    "questionId": "V23",
@@ -2055,11 +2055,11 @@
     }
    ],
    "injection": {
-    "score": 0.02357262254075132,
+    "score": 0.0037019290681816752,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 2444
+   "credits": 18,
+   "ms": 2620
   },
   {
    "questionId": "V24",
@@ -2140,11 +2140,11 @@
     }
    ],
    "injection": {
-    "score": 0.006638353950262688,
+    "score": 0.004507326015822266,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1367
+   "credits": 8,
+   "ms": 1424
   },
   {
    "questionId": "V25",
@@ -2225,42 +2225,14 @@
     }
    ],
    "injection": {
-    "score": 0.010486619795284535,
+    "score": 0.0038728819147281213,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1292
+   "credits": 8,
+   "ms": 1540
   },
   {
    "questionId": "V26",
-   "status": "set_aside",
-   "reasons": [
-    {
-     "code": "injection",
-     "text": "This row contains instructions aimed at the tool. It was set aside and not answered."
-    }
-   ],
-   "answerIndex": null,
-   "answerLabel": null,
-   "probability": null,
-   "probabilities": null,
-   "evidence": null,
-   "ownerTeam": "Security & IT",
-   "controlArea": "Application security",
-   "comment": null,
-   "grounded": null,
-   "exportBlocked": true,
-   "conflict": null,
-   "passages": [],
-   "injection": {
-    "score": 0.9121523215709657,
-    "verdict": "injection"
-   },
-   "credits": 5,
-   "ms": 813
-  },
-  {
-   "questionId": "V27",
    "status": "owner",
    "reasons": [
     {
@@ -2281,71 +2253,71 @@
    "conflict": null,
    "passages": [
     {
-     "id": "01-information-security-program#3",
-     "docTitle": "Halden Labs Information Security Program",
-     "heading": "Standard",
-     "action": "skip",
-     "score": 0.0022
-    },
-    {
-     "id": "05-infrastructure-security-standard#1",
-     "docTitle": "Halden Labs Infrastructure Security Standard",
-     "heading": "Hosting",
-     "action": "skip",
-     "score": 0.0021
-    },
-    {
      "id": "01-information-security-program#4",
      "docTitle": "Halden Labs Information Security Program",
      "heading": "Policy review",
      "action": "skip",
-     "score": 0.002
-    },
-    {
-     "id": "01-information-security-program#1",
-     "docTitle": "Halden Labs Information Security Program",
-     "heading": "Scope",
-     "action": "skip",
-     "score": 0.0019
-    },
-    {
-     "id": "06-endpoint-and-vendor-policy#2",
-     "docTitle": "Halden Labs Endpoint and Vendor Security Policy",
-     "heading": "Vendors",
-     "action": "skip",
-     "score": 0.0018
-    },
-    {
-     "id": "01-information-security-program#6",
-     "docTitle": "Halden Labs Information Security Program",
-     "heading": "Risk management",
-     "action": "skip",
-     "score": 0.0017
+     "score": 0.0034
     },
     {
      "id": "02-access-control-policy#2",
      "docTitle": "Halden Labs Access Control Policy",
      "heading": "Authentication",
      "action": "skip",
-     "score": 0.0017
+     "score": 0.0025
     },
     {
-     "id": "03-logging-and-monitoring-standard#3",
-     "docTitle": "Halden Labs Logging and Monitoring Standard",
-     "heading": "Retention",
+     "id": "04-incident-response-plan#4",
+     "docTitle": "Halden Labs Incident Response Plan",
+     "heading": "Customer notification",
      "action": "skip",
-     "score": 0.0017
+     "score": 0.0023
+    },
+    {
+     "id": "05-infrastructure-security-standard#5",
+     "docTitle": "Halden Labs Infrastructure Security Standard",
+     "heading": "Testing",
+     "action": "skip",
+     "score": 0.0023
+    },
+    {
+     "id": "01-information-security-program#6",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Risk management",
+     "action": "skip",
+     "score": 0.0022
+    },
+    {
+     "id": "01-information-security-program#1",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Scope",
+     "action": "skip",
+     "score": 0.0021
+    },
+    {
+     "id": "01-information-security-program#3",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Standard",
+     "action": "skip",
+     "score": 0.0019
+    },
+    {
+     "id": "01-information-security-program#7",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Training",
+     "action": "skip",
+     "score": 0.0019
     }
    ],
    "injection": {
-    "score": 0.05350354768204102,
+    "score": 0.150395779290736,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1488
+   "credits": 7,
+   "ms": 1229
   },
   {
-   "questionId": "V28",
+   "questionId": "V27",
    "status": "set_aside",
    "reasons": [
     {
@@ -2366,11 +2338,96 @@
    "conflict": null,
    "passages": [],
    "injection": {
-    "score": 0.5094483435239697,
+    "score": 0.565324989256862,
     "verdict": "injection"
    },
    "credits": 5,
-   "ms": 944
+   "ms": 822
+  },
+  {
+   "questionId": "V28",
+   "status": "owner",
+   "reasons": [
+    {
+     "code": "no_policy",
+     "text": "No policy passage covers this question."
+    }
+   ],
+   "answerIndex": null,
+   "answerLabel": null,
+   "probability": null,
+   "probabilities": null,
+   "evidence": null,
+   "ownerTeam": "Security & IT",
+   "controlArea": "Application security",
+   "comment": null,
+   "grounded": null,
+   "exportBlocked": true,
+   "conflict": null,
+   "passages": [
+    {
+     "id": "05-infrastructure-security-standard#3",
+     "docTitle": "Halden Labs Infrastructure Security Standard",
+     "heading": "Hardening and patching",
+     "action": "skip",
+     "score": 0.002
+    },
+    {
+     "id": "01-information-security-program#4",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Policy review",
+     "action": "skip",
+     "score": 0.0019
+    },
+    {
+     "id": "01-information-security-program#1",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Scope",
+     "action": "skip",
+     "score": 0.0018
+    },
+    {
+     "id": "06-endpoint-and-vendor-policy#2",
+     "docTitle": "Halden Labs Endpoint and Vendor Security Policy",
+     "heading": "Vendors",
+     "action": "skip",
+     "score": 0.0018
+    },
+    {
+     "id": "01-information-security-program#3",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Standard",
+     "action": "skip",
+     "score": 0.0017
+    },
+    {
+     "id": "01-information-security-program#6",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Risk management",
+     "action": "skip",
+     "score": 0.0017
+    },
+    {
+     "id": "03-logging-and-monitoring-standard#1",
+     "docTitle": "Halden Labs Logging and Monitoring Standard",
+     "heading": "What is logged",
+     "action": "skip",
+     "score": 0.0017
+    },
+    {
+     "id": "04-incident-response-plan#1",
+     "docTitle": "Halden Labs Incident Response Plan",
+     "heading": "Documented procedures",
+     "action": "skip",
+     "score": 0.0017
+    }
+   ],
+   "injection": {
+    "score": 0.011815070179861498,
+    "verdict": "benign"
+   },
+   "credits": 7,
+   "ms": 1507
   },
   {
    "questionId": "V29",
@@ -2459,11 +2516,11 @@
     }
    ],
    "injection": {
-    "score": 0.003911222111542378,
+    "score": 0.003914823441965809,
     "verdict": "benign"
    },
-   "credits": 14,
-   "ms": 2417
+   "credits": 12,
+   "ms": 2676
   },
   {
    "questionId": "V30",
@@ -2544,11 +2601,11 @@
     }
    ],
    "injection": {
-    "score": 0.002340363488228081,
+    "score": 0.0037518899608414147,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1430
+   "credits": 8,
+   "ms": 1272
   },
   {
    "questionId": "V31",
@@ -2637,11 +2694,11 @@
     }
    ],
    "injection": {
-    "score": 0.004108290413011972,
+    "score": 0.004055523936427163,
     "verdict": "benign"
    },
-   "credits": 17,
-   "ms": 2353
+   "credits": 16,
+   "ms": 2135
   },
   {
    "questionId": "V32",
@@ -2731,11 +2788,11 @@
     }
    ],
    "injection": {
-    "score": 0.0037727284973700925,
+    "score": 0.004025345034065597,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2680
+   "credits": 14,
+   "ms": 2566
   },
   {
    "questionId": "V33",
@@ -2816,11 +2873,11 @@
     }
    ],
    "injection": {
-    "score": 0.00625341181603023,
+    "score": 0.004471739026931987,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1280
+   "credits": 8,
+   "ms": 1434
   },
   {
    "questionId": "V34",
@@ -2901,11 +2958,11 @@
     }
    ],
    "injection": {
-    "score": 0.0034178542218304964,
+    "score": 0.003556824465043351,
     "verdict": "benign"
    },
    "credits": 9,
-   "ms": 1212
+   "ms": 1397
   },
   {
    "questionId": "V35",
@@ -2986,11 +3043,11 @@
     }
    ],
    "injection": {
-    "score": 0.011625759759089638,
+    "score": 0.002940657807360525,
     "verdict": "benign"
    },
    "credits": 9,
-   "ms": 1682
+   "ms": 1551
   },
   {
    "questionId": "V36",
@@ -3079,11 +3136,11 @@
     }
    ],
    "injection": {
-    "score": 0.005347677357133707,
+    "score": 0.003711306550533977,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2507
+   "credits": 13,
+   "ms": 2583
   },
   {
    "questionId": "V37",
@@ -3169,11 +3226,11 @@
     }
    ],
    "injection": {
-    "score": 0.004792385273849065,
+    "score": 0.0035648906276993797,
     "verdict": "benign"
    },
-   "credits": 22,
-   "ms": 3312
+   "credits": 20,
+   "ms": 3154
   },
   {
    "questionId": "V38",
@@ -3262,11 +3319,11 @@
     }
    ],
    "injection": {
-    "score": 0.0021555591445271416,
+    "score": 0.005101106501220309,
     "verdict": "benign"
    },
-   "credits": 17,
-   "ms": 2554
+   "credits": 15,
+   "ms": 2813
   },
   {
    "questionId": "V39",
@@ -3352,11 +3409,11 @@
     }
    ],
    "injection": {
-    "score": 0.003313351133494735,
+    "score": 0.0032071890212450604,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 3044,
+   "credits": 17,
+   "ms": 2904,
    "evidenceAll": [
     "Cloud security groups and a managed web application firewall restrict inbound and outbound traffic."
    ],
@@ -3446,11 +3503,11 @@
     }
    ],
    "injection": {
-    "score": 0.003612140884217352,
+    "score": 0.0032274860747888434,
     "verdict": "benign"
    },
-   "credits": 22,
-   "ms": 3062,
+   "credits": 20,
+   "ms": 3387,
    "evidenceAll": [
     "Internet-facing services sit in a separate public subnet; databases and internal services run in private subnets with no public addresses."
    ],
@@ -3545,11 +3602,11 @@
     }
    ],
    "injection": {
-    "score": 0.004574785610430121,
+    "score": 0.002674307201309234,
     "verdict": "benign"
    },
-   "credits": 24,
-   "ms": 3931,
+   "credits": 22,
+   "ms": 3623,
    "evidenceAll": [
     "Internet-facing services sit in a separate public subnet; databases and internal services run in private subnets with no public addresses."
    ],
@@ -3639,11 +3696,11 @@
     }
    ],
    "injection": {
-    "score": 0.0032442193231317917,
+    "score": 0.003459524164767136,
     "verdict": "benign"
    },
    "credits": 19,
-   "ms": 3688,
+   "ms": 3412,
    "evidenceAll": [
     "All traffic between services is encrypted with TLS 1.2 or higher, including traffic inside the private network."
    ],
@@ -3728,11 +3785,11 @@
     }
    ],
    "injection": {
-    "score": 0.0034561339649055167,
+    "score": 0.004054457192437688,
     "verdict": "benign"
    },
    "credits": 7,
-   "ms": 1191
+   "ms": 1272
   },
   {
    "questionId": "V44",
@@ -3813,11 +3870,11 @@
     }
    ],
    "injection": {
-    "score": 0.003219500007457521,
+    "score": 0.004297596183796104,
     "verdict": "benign"
    },
    "credits": 8,
-   "ms": 1186
+   "ms": 1362
   },
   {
    "questionId": "V45",
@@ -3903,11 +3960,11 @@
     }
    ],
    "injection": {
-    "score": 0.002461976807755506,
+    "score": 0.0048016164271468265,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 3300,
+   "credits": 19,
+   "ms": 3404,
    "evidenceAll": [
     "Network and service availability is monitored around the clock, with alerts paged to the on-call engineer."
    ],
@@ -3997,11 +4054,11 @@
     }
    ],
    "injection": {
-    "score": 0.0035348095209813968,
+    "score": 0.0039330700368799265,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 3007,
+   "credits": 18,
+   "ms": 2953,
    "evidenceAll": [
     "Network and service availability is monitored around the clock, with alerts paged to the on-call engineer."
    ],
@@ -4094,11 +4151,11 @@
     }
    ],
    "injection": {
-    "score": 0.0039609079479931975,
+    "score": 0.004526061150966432,
     "verdict": "benign"
    },
-   "credits": 24,
-   "ms": 3290
+   "credits": 22,
+   "ms": 3648
   },
   {
    "questionId": "V48",
@@ -4130,11 +4187,11 @@
    "conflict": {
     "a": {
      "docTitle": "Halden Labs Incident Response Plan",
-     "quote": ""
+     "quote": "To support investigations, security logs are retained for 12 months."
     },
     "b": {
      "docTitle": "Halden Labs Logging and Monitoring Standard",
-     "quote": ""
+     "quote": "Security event logs are retained for 90 days in the central log platform and then deleted."
     }
    },
    "passages": [
@@ -4196,11 +4253,11 @@
     }
    ],
    "injection": {
-    "score": 0.00297891676150408,
+    "score": 0.003089715969385898,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 2907
+   "credits": 18,
+   "ms": 2710
   },
   {
    "questionId": "V49",
@@ -4286,11 +4343,11 @@
     }
    ],
    "injection": {
-    "score": 0.0028063718286611694,
+    "score": 0.00334151680326078,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 2864,
+   "credits": 17,
+   "ms": 3093,
    "evidenceAll": [
     "All production and network logs are forwarded to a central log platform."
    ],
@@ -4375,19 +4432,19 @@
     }
    ],
    "injection": {
-    "score": 0.004976218483544903,
+    "score": 0.002722844108920097,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1260
+   "credits": 8,
+   "ms": 1231
   },
   {
    "questionId": "V51",
-   "status": "set_aside",
+   "status": "owner",
    "reasons": [
     {
-     "code": "injection",
-     "text": "This row contains instructions aimed at the tool. It was set aside and not answered."
+     "code": "no_policy",
+     "text": "No policy passage covers this question."
     }
    ],
    "answerIndex": null,
@@ -4401,14 +4458,70 @@
    "grounded": null,
    "exportBlocked": true,
    "conflict": null,
-   "passages": [],
+   "passages": [
+    {
+     "id": "01-information-security-program#1",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Scope",
+     "action": "skip",
+     "score": 0.0059
+    },
+    {
+     "id": "05-infrastructure-security-standard#2",
+     "docTitle": "Halden Labs Infrastructure Security Standard",
+     "heading": "Network",
+     "action": "skip",
+     "score": 0.0057
+    },
+    {
+     "id": "01-information-security-program#3",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Standard",
+     "action": "skip",
+     "score": 0.0035
+    },
+    {
+     "id": "05-infrastructure-security-standard#1",
+     "docTitle": "Halden Labs Infrastructure Security Standard",
+     "heading": "Hosting",
+     "action": "skip",
+     "score": 0.0035
+    },
+    {
+     "id": "01-information-security-program#4",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Policy review",
+     "action": "skip",
+     "score": 0.0026
+    },
+    {
+     "id": "01-information-security-program#5",
+     "docTitle": "Halden Labs Information Security Program",
+     "heading": "Audits",
+     "action": "skip",
+     "score": 0.002
+    },
+    {
+     "id": "04-incident-response-plan#2",
+     "docTitle": "Halden Labs Incident Response Plan",
+     "heading": "Investigation",
+     "action": "skip",
+     "score": 0.002
+    },
+    {
+     "id": "06-endpoint-and-vendor-policy#1",
+     "docTitle": "Halden Labs Endpoint and Vendor Security Policy",
+     "heading": "Company devices",
+     "action": "skip",
+     "score": 0.002
+    }
+   ],
    "injection": {
-    "score": 0.9259625795388379,
-    "verdict": "injection",
-    "quote": "How are your wireless networks encrypted?"
+    "score": 0.11249500714865857,
+    "verdict": "benign"
    },
-   "credits": 6,
-   "ms": 928
+   "credits": 8,
+   "ms": 1433
   },
   {
    "questionId": "V52",
@@ -4494,11 +4607,11 @@
     }
    ],
    "injection": {
-    "score": 0.003716438839218572,
+    "score": 0.003787097933226846,
     "verdict": "benign"
    },
    "credits": 18,
-   "ms": 2992,
+   "ms": 3049,
    "evidenceAll": [
     "Halden Labs does not operate a traditional VPN."
    ],
@@ -4598,11 +4711,11 @@
     }
    ],
    "injection": {
-    "score": 0.0026640861616246125,
+    "score": 0.004694120478434982,
     "verdict": "benign"
    },
-   "credits": 21,
-   "ms": 3250,
+   "credits": 19,
+   "ms": 3844,
    "evidenceAll": [
     "Halden Labs does not operate a traditional VPN."
    ],
@@ -4687,11 +4800,11 @@
     }
    ],
    "injection": {
-    "score": 0.0032201977357451117,
+    "score": 0.003539806847299598,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1195
+   "credits": 8,
+   "ms": 1560
   },
   {
    "questionId": "V55",
@@ -4777,11 +4890,11 @@
     }
    ],
    "injection": {
-    "score": 0.0025274863894206856,
+    "score": 0.004106900002532665,
     "verdict": "benign"
    },
-   "credits": 23,
-   "ms": 3328,
+   "credits": 22,
+   "ms": 3632,
    "evidenceAll": [
     "The Security & IT team reviews every service provider that will store or process customer data before contract signature, and again every year."
    ],
@@ -4871,11 +4984,11 @@
     }
    ],
    "injection": {
-    "score": 0.0026705286677940476,
+    "score": 0.003147322431029887,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 2723,
+   "credits": 15,
+   "ms": 3150,
    "evidenceAll": [
     "Servers are built from hardened, versioned images defined in code."
    ],
@@ -4964,11 +5077,11 @@
     }
    ],
    "injection": {
-    "score": 0.004615155577166075,
+    "score": 0.0038291197477262617,
     "verdict": "benign"
    },
-   "credits": 21,
-   "ms": 2793
+   "credits": 20,
+   "ms": 2958
   },
   {
    "questionId": "V58",
@@ -5053,11 +5166,11 @@
     }
    ],
    "injection": {
-    "score": 0.0035617006239430093,
+    "score": 0.0035816225906771804,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2429
+   "credits": 15,
+   "ms": 2655
   },
   {
    "questionId": "V59",
@@ -5148,11 +5261,11 @@
     }
    ],
    "injection": {
-    "score": 0.003992899897969027,
+    "score": 0.003386985275827925,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 2798,
+   "credits": 16,
+   "ms": 2892,
    "evidenceAll": [
     "Servers are built from hardened, versioned images defined in code."
    ],
@@ -5245,11 +5358,11 @@
     }
    ],
    "injection": {
-    "score": 0.0032632887981534076,
+    "score": 0.0030991677023152198,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 3338
+   "credits": 16,
+   "ms": 2864
   },
   {
    "questionId": "V61",
@@ -5334,11 +5447,11 @@
     }
    ],
    "injection": {
-    "score": 0.007619328179119256,
+    "score": 0.0038241786559413127,
     "verdict": "benign"
    },
    "credits": 14,
-   "ms": 2233
+   "ms": 2326
   },
   {
    "questionId": "V62",
@@ -5424,11 +5537,11 @@
     }
    ],
    "injection": {
-    "score": 0.0030716274886710693,
+    "score": 0.0035449607182790333,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 3369,
+   "credits": 19,
+   "ms": 3540,
    "evidenceAll": [
     "Security patches are applied monthly."
    ],
@@ -5518,11 +5631,11 @@
     }
    ],
    "injection": {
-    "score": 0.002752462211132789,
+    "score": 0.0035963026871798087,
     "verdict": "benign"
    },
-   "credits": 15,
-   "ms": 3253,
+   "credits": 16,
+   "ms": 3120,
    "evidenceAll": [
     "Critical vulnerabilities are patched within 72 hours under an emergency change."
    ],
@@ -5615,11 +5728,11 @@
     }
    ],
    "injection": {
-    "score": 0.0026492543415824743,
+    "score": 0.003875147596794859,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 2353
+   "credits": 16,
+   "ms": 2248
   },
   {
    "questionId": "V65",
@@ -5705,11 +5818,11 @@
     }
    ],
    "injection": {
-    "score": 0.0054012413865087705,
+    "score": 0.0037100383309781604,
     "verdict": "benign"
    },
-   "credits": 20,
-   "ms": 3341,
+   "credits": 21,
+   "ms": 3326,
    "evidenceAll": [
     "Production servers, network devices and identity systems log security-relevant events, including sign-ins, privilege changes and access to customer data."
    ],
@@ -5749,11 +5862,11 @@
    "conflict": {
     "a": {
      "docTitle": "Halden Labs Incident Response Plan",
-     "quote": ""
+     "quote": "To support investigations, security logs are retained for 12 months."
     },
     "b": {
      "docTitle": "Halden Labs Logging and Monitoring Standard",
-     "quote": ""
+     "quote": "Security event logs are retained for 90 days in the central log platform and then deleted."
     }
    },
    "passages": [
@@ -5815,11 +5928,11 @@
     }
    ],
    "injection": {
-    "score": 0.0028971849280293727,
+    "score": 0.004033681501094177,
     "verdict": "benign"
    },
    "credits": 17,
-   "ms": 3256
+   "ms": 3154
   },
   {
    "questionId": "V67",
@@ -5905,11 +6018,11 @@
     }
    ],
    "injection": {
-    "score": 0.0036898060614929395,
+    "score": 0.0037027440686311364,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 2748,
+   "credits": 17,
+   "ms": 2974,
    "evidenceAll": [
     "All production and network logs are forwarded to a central log platform."
    ],
@@ -5999,11 +6112,11 @@
     }
    ],
    "injection": {
-    "score": 0.003345629228263869,
+    "score": 0.004615155577166075,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2988,
+   "credits": 17,
+   "ms": 3061,
    "evidenceAll": [
     "Administrators use a separate privileged account for administrative work and a standard account for email and daily tasks."
    ],
@@ -6093,11 +6206,11 @@
     }
    ],
    "injection": {
-    "score": 0.004907850234807998,
+    "score": 0.004121044433436749,
     "verdict": "benign"
    },
-   "credits": 20,
-   "ms": 2985,
+   "credits": 19,
+   "ms": 2958,
    "evidenceAll": [
     "Production servers are reached through a bastion host with personal accounts; shared root logins are disabled and elevation uses sudo."
    ],
@@ -6182,11 +6295,11 @@
     }
    ],
    "injection": {
-    "score": 0.010999251924285525,
+    "score": 0.00497031740344378,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1370
+   "credits": 7,
+   "ms": 1205
   },
   {
    "questionId": "V71",
@@ -6275,11 +6388,11 @@
     }
    ],
    "injection": {
-    "score": 0.0038198332300125593,
+    "score": 0.003170431858957823,
     "verdict": "benign"
    },
-   "credits": 17,
-   "ms": 2217
+   "credits": 16,
+   "ms": 2305
   },
   {
    "questionId": "V72",
@@ -6365,11 +6478,11 @@
     }
    ],
    "injection": {
-    "score": 0.0025702574424792957,
+    "score": 0.0036165041697306943,
     "verdict": "benign"
    },
    "credits": 18,
-   "ms": 3526,
+   "ms": 3782,
    "evidenceAll": [
     "Administrative access to production is reviewed every quarter by the system owners."
    ],
@@ -6462,11 +6575,11 @@
     }
    ],
    "injection": {
-    "score": 0.0029114863938348723,
+    "score": 0.0033383181882195028,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2595
+   "credits": 14,
+   "ms": 2811
   },
   {
    "questionId": "V74",
@@ -6555,11 +6668,11 @@
     }
    ],
    "injection": {
-    "score": 0.003990852953851154,
+    "score": 0.005139604878110937,
     "verdict": "benign"
    },
-   "credits": 14,
-   "ms": 2270
+   "credits": 12,
+   "ms": 2346
   },
   {
    "questionId": "V75",
@@ -6640,11 +6753,11 @@
     }
    ],
    "injection": {
-    "score": 0.003023175058827099,
+    "score": 0.0031612803314589044,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1180
+   "credits": 7,
+   "ms": 1291
   },
   {
    "questionId": "V76",
@@ -6733,11 +6846,11 @@
     }
    ],
    "injection": {
-    "score": 0.0020243305436054015,
+    "score": 0.00438050686257907,
     "verdict": "benign"
    },
-   "credits": 15,
-   "ms": 3210
+   "credits": 14,
+   "ms": 3409
   },
   {
    "questionId": "V77",
@@ -6818,11 +6931,11 @@
     }
    ],
    "injection": {
-    "score": 0.0022829452841129916,
+    "score": 0.004663796578175505,
     "verdict": "benign"
    },
    "credits": 8,
-   "ms": 1528
+   "ms": 1219
   },
   {
    "questionId": "V78",
@@ -6908,11 +7021,11 @@
     }
    ],
    "injection": {
-    "score": 0.002673006026878033,
+    "score": 0.003434925549069767,
     "verdict": "benign"
    },
    "credits": 13,
-   "ms": 2763,
+   "ms": 2793,
    "evidenceAll": [
     "Restores are tested every quarter."
    ],
@@ -7005,11 +7118,11 @@
     }
    ],
    "injection": {
-    "score": 0.0028675069664808595,
+    "score": 0.0030959052228153316,
     "verdict": "benign"
    },
-   "credits": 17,
-   "ms": 2321
+   "credits": 15,
+   "ms": 2082
   },
   {
    "questionId": "V80",
@@ -7094,11 +7207,11 @@
     }
    ],
    "injection": {
-    "score": 0.002491375957840658,
+    "score": 0.002790857098293076,
     "verdict": "benign"
    },
-   "credits": 15,
-   "ms": 2367
+   "credits": 14,
+   "ms": 2326
   },
   {
    "questionId": "V81",
@@ -7179,11 +7292,11 @@
     }
    ],
    "injection": {
-    "score": 0.0029313792858808307,
+    "score": 0.004277723983287851,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1374
+   "credits": 8,
+   "ms": 1325
   },
   {
    "questionId": "V82",
@@ -7274,11 +7387,11 @@
     }
    ],
    "injection": {
-    "score": 0.003965068142602224,
+    "score": 0.0041143642265205616,
     "verdict": "benign"
    },
-   "credits": 21,
-   "ms": 3375,
+   "credits": 18,
+   "ms": 3249,
    "evidenceAll": [
     "The Halden platform runs entirely in a major public cloud provider's data centers."
    ],
@@ -7368,11 +7481,11 @@
     }
    ],
    "injection": {
-    "score": 0.0025274863894206856,
+    "score": 0.004106900002532665,
     "verdict": "benign"
    },
-   "credits": 23,
-   "ms": 2799,
+   "credits": 21,
+   "ms": 3674,
    "evidenceAll": [
     "The Security & IT team reviews every service provider that will store or process customer data before contract signature, and again every year."
    ],
@@ -7461,11 +7574,11 @@
     }
    ],
    "injection": {
-    "score": 0.0033022599900364154,
+    "score": 0.004266707194733543,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 3132
+   "credits": 17,
+   "ms": 3063
   },
   {
    "questionId": "V85",
@@ -7554,11 +7667,11 @@
     }
    ],
    "injection": {
-    "score": 0.003918067329661823,
+    "score": 0.0040416249756320966,
     "verdict": "benign"
    },
-   "credits": 20,
-   "ms": 2314
+   "credits": 18,
+   "ms": 2639
   },
   {
    "questionId": "V86",
@@ -7643,11 +7756,11 @@
     }
    ],
    "injection": {
-    "score": 0.003164922813445159,
+    "score": 0.0043571706510873165,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 2872
+   "credits": 17,
+   "ms": 2742
   },
   {
    "questionId": "V87",
@@ -7732,11 +7845,11 @@
     }
    ],
    "injection": {
-    "score": 0.0036794394693289156,
+    "score": 0.0036652228241343954,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 2862
+   "credits": 17,
+   "ms": 3269
   },
   {
    "questionId": "V88",
@@ -7821,11 +7934,11 @@
     }
    ],
    "injection": {
-    "score": 0.0031405045591582632,
+    "score": 0.0038395115020026793,
     "verdict": "benign"
    },
    "credits": 15,
-   "ms": 2514
+   "ms": 2754
   },
   {
    "questionId": "V89",
@@ -7911,11 +8024,11 @@
     }
    ],
    "injection": {
-    "score": 0.0033540881368149256,
+    "score": 0.003700322278690993,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 3674,
+   "credits": 16,
+   "ms": 3350,
    "evidenceAll": [
     "Critical vulnerabilities are patched within 72 hours under an emergency change."
    ],
@@ -8004,11 +8117,11 @@
     }
    ],
    "injection": {
-    "score": 0.003264881132761688,
+    "score": 0.004589170629549777,
     "verdict": "benign"
    },
-   "credits": 14,
-   "ms": 2852
+   "credits": 15,
+   "ms": 3213
   },
   {
    "questionId": "V91",
@@ -8094,11 +8207,11 @@
     }
    ],
    "injection": {
-    "score": 0.005315276942896352,
+    "score": 0.0030337207286338375,
     "verdict": "benign"
    },
-   "credits": 24,
-   "ms": 3517,
+   "credits": 22,
+   "ms": 3449,
    "evidenceAll": [
     "Production servers, network devices and identity systems log security-relevant events, including sign-ins, privilege changes and access to customer data."
    ],
@@ -8136,11 +8249,11 @@
    "conflict": {
     "a": {
      "docTitle": "Halden Labs Incident Response Plan",
-     "quote": ""
+     "quote": "To support investigations, security logs are retained for 12 months."
     },
     "b": {
      "docTitle": "Halden Labs Logging and Monitoring Standard",
-     "quote": ""
+     "quote": "Security event logs are retained for 90 days in the central log platform and then deleted."
     }
    },
    "passages": [
@@ -8202,11 +8315,11 @@
     }
    ],
    "injection": {
-    "score": 0.002740959299275869,
+    "score": 0.003347552823414257,
     "verdict": "benign"
    },
-   "credits": 23,
-   "ms": 3390,
+   "credits": 21,
+   "ms": 3442,
    "evidenceAll": [
     "To support investigations, security logs are retained for 12 months."
    ],
@@ -8301,11 +8414,11 @@
     }
    ],
    "injection": {
-    "score": 0.004174384992834956,
+    "score": 0.0041708100392927605,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 2961,
+   "credits": 17,
+   "ms": 3034,
    "evidenceAll": [
     "All production and network logs are forwarded to a central log platform."
    ],
@@ -8390,11 +8503,11 @@
     }
    ],
    "injection": {
-    "score": 0.004412603373328383,
+    "score": 0.003324436740272829,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1471
+   "credits": 8,
+   "ms": 1548
   },
   {
    "questionId": "V95",
@@ -8480,11 +8593,11 @@
     }
    ],
    "injection": {
-    "score": 0.0031697444538193453,
+    "score": 0.0036256463379175097,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 3243,
+   "credits": 18,
+   "ms": 3037,
    "evidenceAll": [
     "Production servers are reached through a bastion host with personal accounts; shared root logins are disabled and elevation uses sudo."
    ],
@@ -8569,11 +8682,11 @@
     }
    ],
    "injection": {
-    "score": 0.002587824577062303,
+    "score": 0.0024561145849690824,
     "verdict": "benign"
    },
    "credits": 9,
-   "ms": 1550
+   "ms": 1253
   },
   {
    "questionId": "V97",
@@ -8659,11 +8772,11 @@
     }
    ],
    "injection": {
-    "score": 0.00316210324116295,
+    "score": 0.004705136339611005,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2657,
+   "credits": 17,
+   "ms": 2987,
    "evidenceAll": [
     "All company laptops are managed by the device management platform, have full-disk encryption turned on and run endpoint malware protection."
    ],
@@ -8753,11 +8866,11 @@
     }
    ],
    "injection": {
-    "score": 0.0032185635278993985,
+    "score": 0.00313186652494013,
     "verdict": "benign"
    },
    "credits": 19,
-   "ms": 3400,
+   "ms": 3685,
    "evidenceAll": [
     "Unenrolled or unencrypted mobile devices are blocked."
    ],
@@ -8847,11 +8960,11 @@
     }
    ],
    "injection": {
-    "score": 0.002815324101576921,
+    "score": 0.004226340160409681,
     "verdict": "benign"
    },
-   "credits": 22,
-   "ms": 3248,
+   "credits": 19,
+   "ms": 3003,
    "evidenceAll": [
     "All company laptops are managed by the device management platform, have full-disk encryption turned on and run endpoint malware protection."
    ],
@@ -8936,11 +9049,11 @@
     }
    ],
    "injection": {
-    "score": 0.0029754557422013712,
+    "score": 0.0034532282138667325,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1473
+   "credits": 8,
+   "ms": 1204
   },
   {
    "questionId": "V101",
@@ -9025,11 +9138,11 @@
     }
    ],
    "injection": {
-    "score": 0.0027606397018249402,
+    "score": 0.003910393953420743,
     "verdict": "benign"
    },
-   "credits": 13,
-   "ms": 2868
+   "credits": 12,
+   "ms": 2601
   },
   {
    "questionId": "V102",
@@ -9115,11 +9228,11 @@
     }
    ],
    "injection": {
-    "score": 0.004547241203896046,
+    "score": 0.0037727284973700925,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 2889,
+   "credits": 18,
+   "ms": 2798,
    "evidenceAll": [
     "An independent firm performs a manual penetration test of the platform once a year."
    ],
@@ -9210,11 +9323,11 @@
     }
    ],
    "injection": {
-    "score": 0.005200037959082415,
+    "score": 0.0031372820053097166,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2832,
+   "credits": 17,
+   "ms": 3018,
    "evidenceAll": [
     "An independent firm performs a manual penetration test of the platform once a year."
    ],
@@ -9303,11 +9416,11 @@
     }
    ],
    "injection": {
-    "score": 0.010667669423419346,
+    "score": 0.0036610570534730824,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2675
+   "credits": 15,
+   "ms": 2850
   },
   {
    "questionId": "V105",
@@ -9393,11 +9506,11 @@
     }
    ],
    "injection": {
-    "score": 0.0029717026399833646,
+    "score": 0.003979809176718807,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 2786,
+   "credits": 17,
+   "ms": 3318,
    "evidenceAll": [
     "Automated vulnerability scans of all production hosts run weekly."
    ],
@@ -9488,11 +9601,11 @@
     }
    ],
    "injection": {
-    "score": 0.0033050932505719337,
+    "score": 0.003177607017843642,
     "verdict": "benign"
    },
-   "credits": 14,
-   "ms": 2924,
+   "credits": 15,
+   "ms": 3160,
    "evidenceAll": [
     "Automated vulnerability scans of all production hosts run weekly."
    ],
@@ -9585,11 +9698,11 @@
     }
    ],
    "injection": {
-    "score": 0.00967270641450535,
+    "score": 0.0036556494450949995,
     "verdict": "benign"
    },
-   "credits": 20,
-   "ms": 3102
+   "credits": 18,
+   "ms": 3264
   },
   {
    "questionId": "V108",
@@ -9674,11 +9787,11 @@
     }
    ],
    "injection": {
-    "score": 0.004962939706315117,
+    "score": 0.0027589646226098274,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2629
+   "credits": 15,
+   "ms": 2532
   },
   {
    "questionId": "V109",
@@ -9768,11 +9881,11 @@
     }
    ],
    "injection": {
-    "score": 0.0034769102858195344,
+    "score": 0.004054457192437688,
     "verdict": "benign"
    },
-   "credits": 20,
-   "ms": 2708
+   "credits": 17,
+   "ms": 2733
   },
   {
    "questionId": "V110",
@@ -9857,11 +9970,11 @@
     }
    ],
    "injection": {
-    "score": 0.002690055890290477,
+    "score": 0.0025730006000976857,
     "verdict": "benign"
    },
    "credits": 17,
-   "ms": 2097
+   "ms": 2247
   },
   {
    "questionId": "V111",
@@ -9950,11 +10063,11 @@
     }
    ],
    "injection": {
-    "score": 0.003057470985208477,
+    "score": 0.0032794263702443645,
     "verdict": "benign"
    },
-   "credits": 23,
-   "ms": 3242
+   "credits": 20,
+   "ms": 3003
   },
   {
    "questionId": "V112",
@@ -10039,11 +10152,11 @@
     }
    ],
    "injection": {
-    "score": 0.0029048948497876204,
+    "score": 0.0030041027220173433,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 3078
+   "credits": 17,
+   "ms": 3026
   },
   {
    "questionId": "V113",
@@ -10134,11 +10247,11 @@
     }
    ],
    "injection": {
-    "score": 0.002494034696899905,
+    "score": 0.0035193496442210708,
     "verdict": "benign"
    },
-   "credits": 17,
-   "ms": 2855,
+   "credits": 15,
+   "ms": 3089,
    "evidenceAll": [
     "To support investigations, security logs are retained for 12 months."
    ],
@@ -10229,11 +10342,11 @@
     }
    ],
    "injection": {
-    "score": 0.0038619814969035327,
+    "score": 0.0035091862061437107,
     "verdict": "benign"
    },
-   "credits": 15,
-   "ms": 2442
+   "credits": 13,
+   "ms": 2145
   },
   {
    "questionId": "V115",
@@ -10318,11 +10431,11 @@
     }
    ],
    "injection": {
-    "score": 0.0020083057082193045,
+    "score": 0.0026846771747185416,
     "verdict": "benign"
    },
-   "credits": 16,
-   "ms": 2534
+   "credits": 14,
+   "ms": 2437
   },
   {
    "questionId": "V116",
@@ -10411,11 +10524,11 @@
     }
    ],
    "injection": {
-    "score": 0.0034769102858195344,
+    "score": 0.004054457192437688,
     "verdict": "benign"
    },
-   "credits": 20,
-   "ms": 1943
+   "credits": 15,
+   "ms": 2454
   },
   {
    "questionId": "V117",
@@ -10501,11 +10614,11 @@
     }
    ],
    "injection": {
-    "score": 0.0033394267942521427,
+    "score": 0.004206945891231273,
     "verdict": "benign"
    },
-   "credits": 24,
-   "ms": 4065,
+   "credits": 21,
+   "ms": 3370,
    "evidenceAll": [
     "Halden Labs does not operate its own data centers; physical security of those facilities is the provider's responsibility and is covered by the provider's SOC 2 report."
    ],
@@ -10602,11 +10715,11 @@
     }
    ],
    "injection": {
-    "score": 0.02104191911861708,
+    "score": 0.003930205012958599,
     "verdict": "benign"
    },
-   "credits": 23,
-   "ms": 3463
+   "credits": 21,
+   "ms": 2911
   },
   {
    "questionId": "V119",
@@ -10687,11 +10800,11 @@
     }
    ],
    "injection": {
-    "score": 0.003177445237575016,
+    "score": 0.003727246129810013,
     "verdict": "benign"
    },
-   "credits": 9,
-   "ms": 1928
+   "credits": 8,
+   "ms": 1253
   },
   {
    "questionId": "V120",
@@ -10776,11 +10889,11 @@
     }
    ],
    "injection": {
-    "score": 0.0027713810662871596,
+    "score": 0.003078142203149059,
     "verdict": "benign"
    },
    "credits": 17,
-   "ms": 2512
+   "ms": 3107
   },
   {
    "questionId": "V121",
@@ -10871,11 +10984,11 @@
     }
    ],
    "injection": {
-    "score": 0.002494034696899905,
+    "score": 0.0035193496442210708,
     "verdict": "benign"
    },
-   "credits": 17,
-   "ms": 2406,
+   "credits": 14,
+   "ms": 2981,
    "evidenceAll": [
     "To support investigations, security logs are retained for 12 months."
    ],
@@ -10966,11 +11079,11 @@
     }
    ],
    "injection": {
-    "score": 0.0038619814969035327,
+    "score": 0.0035091862061437107,
     "verdict": "benign"
    },
    "credits": 15,
-   "ms": 1711
+   "ms": 2424
   },
   {
    "questionId": "V123",
@@ -11055,11 +11168,11 @@
     }
    ],
    "injection": {
-    "score": 0.002327680788261288,
+    "score": 0.002794192801791162,
     "verdict": "benign"
    },
    "credits": 14,
-   "ms": 2582
+   "ms": 2384
   },
   {
    "questionId": "V124",
@@ -11145,11 +11258,11 @@
     }
    ],
    "injection": {
-    "score": 0.002031899093066891,
+    "score": 0.002795686003270292,
     "verdict": "benign"
    },
-   "credits": 26,
-   "ms": 3632,
+   "credits": 24,
+   "ms": 3687,
    "evidenceAll": [
     "Halden Labs does not operate its own data centers; physical security of those facilities is the provider's responsibility and is covered by the provider's SOC 2 report."
    ],
@@ -11244,11 +11357,11 @@
     }
    ],
    "injection": {
-    "score": 0.004188307177310113,
+    "score": 0.0033501561311531924,
     "verdict": "benign"
    },
    "credits": 24,
-   "ms": 3783,
+   "ms": 3744,
    "evidenceAll": [
     "The security program covers all information Halden Labs processes for customers, including the production platform, internal IT, HR processes and third-party services that store or process customer data."
    ],
@@ -11338,11 +11451,11 @@
     }
    ],
    "injection": {
-    "score": 0.002645202954682069,
+    "score": 0.0059830814288182035,
     "verdict": "benign"
    },
-   "credits": 26,
-   "ms": 3516,
+   "credits": 25,
+   "ms": 3490,
    "evidenceAll": [
     "The program is aligned to ISO/IEC 27001:2022 Annex A controls, and its control set is mapped so it can be audited against that standard."
    ],
@@ -11432,11 +11545,11 @@
     }
    ],
    "injection": {
-    "score": 0.0054884002060735515,
+    "score": 0.004514421759868492,
     "verdict": "benign"
    },
-   "credits": 25,
-   "ms": 3536,
+   "credits": 23,
+   "ms": 3697,
    "evidenceAll": [
     "The security program covers all information Halden Labs processes for customers, including the production platform, internal IT, HR processes and third-party services that store or process customer data."
    ],
@@ -11526,11 +11639,11 @@
     }
    ],
    "injection": {
-    "score": 0.002894916929957913,
+    "score": 0.00362017620937638,
     "verdict": "benign"
    },
    "credits": 18,
-   "ms": 3435,
+   "ms": 3334,
    "evidenceAll": [
     "The Head of Security owns the information security and privacy program and reports to the CTO."
    ],
@@ -11622,11 +11735,11 @@
     }
    ],
    "injection": {
-    "score": 0.002898462250785716,
+    "score": 0.003920695449032174,
     "verdict": "benign"
    },
-   "credits": 23,
-   "ms": 3517,
+   "credits": 20,
+   "ms": 3475,
    "evidenceAll": [
     "All security policies are reviewed at least once per year, and immediately when a significant change in systems, law or risk occurs."
    ],
@@ -11717,11 +11830,11 @@
     }
    ],
    "injection": {
-    "score": 0.003299052575856276,
+    "score": 0.0032100584759264805,
     "verdict": "benign"
    },
    "credits": 16,
-   "ms": 3206,
+   "ms": 2790,
    "evidenceAll": [
     "Internal security audits are performed quarterly by the Security & IT team and cover the whole program."
    ],
@@ -11811,11 +11924,11 @@
     }
    ],
    "injection": {
-    "score": 0.011813396669375087,
+    "score": 0.0029721262885992195,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 3263,
+   "credits": 17,
+   "ms": 3331,
    "evidenceAll": [
     "Internal security audits are performed quarterly by the Security & IT team and cover the whole program."
    ],
@@ -11910,11 +12023,11 @@
     }
    ],
    "injection": {
-    "score": 0.004074587026179355,
+    "score": 0.003073187663588328,
     "verdict": "benign"
    },
-   "credits": 23,
-   "ms": 2765,
+   "credits": 21,
+   "ms": 3074,
    "evidenceAll": [
     "Internal security audits are performed quarterly by the Security & IT team and cover the whole program."
    ],
@@ -12005,11 +12118,11 @@
     }
    ],
    "injection": {
-    "score": 0.003728603423589605,
+    "score": 0.006150172821337785,
     "verdict": "benign"
    },
-   "credits": 20,
-   "ms": 2888,
+   "credits": 17,
+   "ms": 3593,
    "evidenceAll": [
     "An independent third-party auditor performs a SOC 2 Type II audit every year covering all systems used to deliver the service."
    ],
@@ -12104,11 +12217,11 @@
     }
    ],
    "injection": {
-    "score": 0.0028671997781175573,
+    "score": 0.004133014290250703,
     "verdict": "benign"
    },
-   "credits": 22,
-   "ms": 3311,
+   "credits": 21,
+   "ms": 3583,
    "evidenceAll": [
     "An independent third-party auditor performs a SOC 2 Type II audit every year covering all systems used to deliver the service."
    ],
@@ -12203,11 +12316,11 @@
     }
    ],
    "injection": {
-    "score": 0.0031236486372736576,
+    "score": 0.0027825626847008955,
     "verdict": "benign"
    },
-   "credits": 25,
-   "ms": 3899,
+   "credits": 24,
+   "ms": 3394,
    "evidenceAll": [
     "An independent third-party auditor performs a SOC 2 Type II audit every year covering all systems used to deliver the service."
    ],
@@ -12297,11 +12410,11 @@
     }
    ],
    "injection": {
-    "score": 0.01483668339707167,
+    "score": 0.00389973910457575,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 3008,
+   "credits": 16,
+   "ms": 3201,
    "evidenceAll": [
     "A management summary of the latest report is shared with customers under NDA."
    ],
@@ -12392,11 +12505,11 @@
     }
    ],
    "injection": {
-    "score": 0.006864554027449676,
+    "score": 0.0031405045591582632,
     "verdict": "benign"
    },
-   "credits": 20,
-   "ms": 3257,
+   "credits": 18,
+   "ms": 3457,
    "evidenceAll": [
     "Risk assessments are reviewed and updated twice per year, and after any major incident."
    ],
@@ -12486,11 +12599,11 @@
     }
    ],
    "injection": {
-    "score": 0.0026782028848653106,
+    "score": 0.0034445688928430584,
     "verdict": "benign"
    },
    "credits": 20,
-   "ms": 3267,
+   "ms": 3571,
    "evidenceAll": [
     "The Security & IT team reviews every service provider that will store or process customer data before contract signature, and again every year."
    ],
@@ -12580,11 +12693,11 @@
     }
    ],
    "injection": {
-    "score": 0.002934951594348645,
+    "score": 0.0035110760245740114,
     "verdict": "benign"
    },
    "credits": 20,
-   "ms": 3425,
+   "ms": 3522,
    "evidenceAll": [
     "Contracts with these providers require them to protect the security and confidentiality of customer data at least to the standard of this program."
    ],
@@ -12674,11 +12787,11 @@
     }
    ],
    "injection": {
-    "score": 0.002555872200320164,
+    "score": 0.003510368866094793,
     "verdict": "benign"
    },
    "credits": 19,
-   "ms": 2928,
+   "ms": 2815,
    "evidenceAll": [
     "Production changes go through a documented change process. Changes are classified as standard, normal or emergency by impact, and every change record is retained."
    ],
@@ -12771,11 +12884,11 @@
     }
    ],
    "injection": {
-    "score": 0.0031889849749011656,
+    "score": 0.00408083540624693,
     "verdict": "benign"
    },
-   "credits": 18,
-   "ms": 2157
+   "credits": 16,
+   "ms": 2300
   },
   {
    "questionId": "V142",
@@ -12861,11 +12974,11 @@
     }
    ],
    "injection": {
-    "score": 0.0033308977970525344,
+    "score": 0.0038742420675577094,
     "verdict": "benign"
    },
-   "credits": 20,
-   "ms": 2842,
+   "credits": 16,
+   "ms": 2856,
    "evidenceAll": [
     "Production changes go through a documented change process."
    ],
@@ -12955,11 +13068,11 @@
     }
    ],
    "injection": {
-    "score": 0.005568663262730089,
+    "score": 0.003413328891968881,
     "verdict": "benign"
    },
    "credits": 18,
-   "ms": 3202,
+   "ms": 2898,
    "evidenceAll": [
     "This plan documents how Halden Labs detects, triages, contains, investigates and recovers from security incidents."
    ],
@@ -13049,11 +13162,11 @@
     }
    ],
    "injection": {
-    "score": 0.005767451847224936,
+    "score": 0.0043862882361432876,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 3039,
+   "credits": 17,
+   "ms": 2916,
    "evidenceAll": [
     "Halden Labs maintains an internal incident response team with forensics tooling and can conduct investigations without outside help."
    ],
@@ -13143,11 +13256,11 @@
     }
    ],
    "injection": {
-    "score": 0.013434875074058383,
+    "score": 0.003423190686801969,
     "verdict": "benign"
    },
-   "credits": 21,
-   "ms": 3330,
+   "credits": 19,
+   "ms": 3472,
    "evidenceAll": [
     "Affected customers are notified without undue delay, and in any case within 72 hours of confirming a security incident that affects their data."
    ],
@@ -13232,11 +13345,11 @@
     }
    ],
    "injection": {
-    "score": 0.003326935681836951,
+    "score": 0.0036455474399308407,
     "verdict": "benign"
    },
    "credits": 8,
-   "ms": 1241
+   "ms": 1336
   },
   {
    "questionId": "V147",
@@ -13327,11 +13440,11 @@
     }
    ],
    "injection": {
-    "score": 0.0036491444031796494,
+    "score": 0.002893919633331965,
     "verdict": "benign"
    },
    "credits": 23,
-   "ms": 3200,
+   "ms": 3631,
    "evidenceAll": [
     "Access to systems and data is granted on a need-to-know and least-privilege basis."
    ],
@@ -13421,11 +13534,11 @@
     }
    ],
    "injection": {
-    "score": 0.00433237474869308,
+    "score": 0.003910063452416956,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 3146,
+   "credits": 15,
+   "ms": 2752,
    "evidenceAll": [
     "Violations of security policy are handled through the HR disciplinary process."
    ],
@@ -13515,11 +13628,11 @@
     }
    ],
    "injection": {
-    "score": 0.0029021960013576598,
+    "score": 0.007161862982396849,
     "verdict": "benign"
    },
-   "credits": 23,
-   "ms": 3593,
+   "credits": 21,
+   "ms": 3295,
    "evidenceAll": [
     "When an employee, contractor or intern leaves, HR raises an offboarding ticket and all logical access is revoked within 24 hours."
    ],
@@ -13610,11 +13723,11 @@
     }
    ],
    "injection": {
-    "score": 0.0027367724402460603,
+    "score": 0.003630659638361511,
     "verdict": "benign"
    },
    "credits": 17,
-   "ms": 3022,
+   "ms": 2912,
    "evidenceAll": [
     "All employees complete security and privacy training during onboarding and then every year."
    ],
@@ -13704,11 +13817,11 @@
     }
    ],
    "injection": {
-    "score": 0.0021633099507032405,
+    "score": 0.0036815578823111705,
     "verdict": "benign"
    },
-   "credits": 20,
-   "ms": 2939,
+   "credits": 17,
+   "ms": 3106,
    "evidenceAll": [
     "Contractors and interns with system access complete the same training before access is granted."
    ],
@@ -13798,11 +13911,11 @@
     }
    ],
    "injection": {
-    "score": 0.004319349253968041,
+    "score": 0.003047796775163425,
     "verdict": "benign"
    },
-   "credits": 19,
-   "ms": 2897,
+   "credits": 18,
+   "ms": 3333,
    "evidenceAll": [
     "Background checks are performed for employees in Engineering and Customer Support before they are granted access to production systems or customer data."
    ],

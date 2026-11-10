@@ -56,7 +56,7 @@ Two synthetic policy packs for fictional companies, run against 37 questions fro
 - The design trades extra owner tasks for fewer wrong answers. Half the owner tasks were questions our labels say the policies settle, for example "backup media in an off-site facility" against a policy that says "backed up continuously to a second cloud region". A person resolves those in seconds.
 - The one wrong fill: Orrin's leaver policy has no time limit and doesn't cover physical access, and TrustDesk still answered "Yes". One label was corrected after the first run, noted in [`data/labels-b.json`](data/labels-b.json).
 - **Last year's sheet:** on the Halden sample, 27 of the 27 unchanged questions were matched as "same". No changed or new question was marked "same", so no stale answer was reused. Two changed questions were marked "new", which only means they get the full read.
-- **Full VSAQ run:** see [`eval/halden-all.md`](eval/halden-all.md) for all 152 questions against the Halden policies. Most of VSAQ goes beyond what six short policies cover, so most of it goes to owners.
+- **Full VSAQ run:** all 152 questions against the six Halden policies took 136 s, 895 calls and 2,333 credits. 57 were answered, 94 went to owners (most of VSAQ goes beyond what six short policies cover), and 1 was set aside. That one was a false alarm: a clickjacking explainer that quotes an HTTP header. See [`eval/halden-all.md`](eval/halden-all.md).
 
 ## Run it locally
 
