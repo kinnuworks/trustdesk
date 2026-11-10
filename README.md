@@ -6,10 +6,14 @@ Each answer needs a decision, an exact quote and a filled record, and Clocked re
 
 **Live app:** https://trustdesk-questionnaires.vercel.app (opens on a sample request, no sign-up, no key)
 
+![The sample request: 40 questions, each answered with its source sentence or routed to an owner](docs/app.png)
+
 Try it in 30 seconds:
 1. Open the link. A 40-question questionnaire is answered on screen, replayed from a recorded live run.
 2. Click any row. You see the probability for each option, the policy sentence highlighted in place, the comment check, and every raw Clocked request and response.
 3. Open **Owner inbox** for what it would not answer and why. Open **Try your own policies** to run up to 25 questions live on text you paste.
+
+![Evidence drawer: Decide probabilities, the drafted comment with its Verify score, and a Compare conflict between two policies](docs/evidence.png)
 
 ## What happens to each question
 
