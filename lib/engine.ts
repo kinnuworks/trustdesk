@@ -128,8 +128,7 @@ export async function answerQuestion(
     q.choices.forEach((c, i) => (criteria[`option_${i + 1}`] = c));
     criteria[NOT_ESTABLISHED] = 'The policy documents do not clearly establish which option is true for this company.';
     const dec = await call('decide', {
-      state: q.text,
-      documents: top.map((p) => ({ id: p.id, text: p.text })),
+      state: `Questionnaire question: ${q.text}\n\nCompany policy text:\n\n${top.map((p) => p.text).join('\n\n')}`,
       instructions:
         "You are answering a customer's security questionnaire for the company that wrote these policy documents. Use only what the documents state.",
       questions: { answer: { type: 'choice', criteria } },
@@ -166,29 +165,39 @@ export async function answerQuestion(
         },
       });
       const f = ex.fields.evidence;
-      if (f?.value && typeof f.start === 'number') {
-        const owner = [...spans].reverse().find((s) => f.start! >= s.from) ?? spans[0];
-        const local = f.start - owner.from;
+      const items: { value: string; start: number }[] = (f?.items ?? [])
+        .filter((it: any) => it?.value && typeof it.start === 'number')
+        .map((it: any) => ({ value: String(it.value), start: it.start }));
+      if (items.length === 0 && f?.value && typeof f.start === 'number' && !Array.isArray(f.value)) items.push({ value: String(f.value), start: f.start });
+      if (items.length > 0) {
+        const first = items[0];
+        const owner = [...spans].reverse().find((s) => first.start >= s.from) ?? spans[0];
+        const local = first.start - owner.from;
         r.evidence = {
-          quote: String(f.value),
+          quote: first.value,
           docId: owner.p.docId,
           docTitle: owner.p.docTitle,
           start: owner.p.start + local,
-          end: owner.p.start + local + String(f.value).length,
+          end: owner.p.start + local + first.value.length,
         };
-        // Second reading: does that sentence really support the chosen option? Disagreement goes to a person.
+        r.evidenceAll = items.map((it) => it.value);
+        // Second reader: pick the option again from the quoted sentence alone. If the two readings
+        // disagree, the sentence is not enough to answer, and a person decides.
         const chk = await call('decide', {
-          state: { question: q.text, proposed_answer: r.answerLabel, policy_sentence: r.evidence.quote },
-          questions: {
-            supports: {
-              type: 'noul',
-              instructions: 'Does the policy sentence on its own support the proposed answer to the question?',
-              threshold: 0.5,
-            },
-          },
+          state: `Questionnaire question: ${q.text}\n\nThe only policy text available: "${r.evidence.quote}"`,
+          instructions: 'Answer only from that one sentence. Choose not_established if the sentence alone does not settle it.',
+          questions: { answer: { type: 'choice', criteria } },
         });
-        if (chk.answers.supports.noul < 0.5)
-          reasons.push({ code: 'evidence_disagrees', text: 'The quoted policy sentence does not support the chosen answer.' });
+        const second = chk.answers.answer.choice;
+        r.secondReading = second === NOT_ESTABLISHED ? null : q.choices[Number(second.replace('option_', '')) - 1] ?? null;
+        if (second !== ans.choice)
+          reasons.push({
+            code: 'evidence_disagrees',
+            text:
+              second === NOT_ESTABLISHED
+                ? 'The quoted policy text on its own does not settle the question.'
+                : 'Read on its own, the quoted policy text points to a different option.',
+          });
       } else {
         reasons.push({ code: 'no_evidence', text: 'No policy sentence supports the chosen answer.' });
       }

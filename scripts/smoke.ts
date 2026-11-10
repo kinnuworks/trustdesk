@@ -1,0 +1,12 @@
+import { readFileSync, readdirSync } from 'node:fs';
+import { answerQuestion, DEFAULT_OPTIONS } from '../lib/engine.js';
+import { LiveClient } from '../lib/live.js';
+import { chunkPolicies, policyFromMarkdown } from '../lib/policies.js';
+const docs = readdirSync('data/policies').sort().map((f) => policyFromMarkdown(f.replace('.md', ''), readFileSync(`data/policies/${f}`, 'utf8')));
+const qs = JSON.parse(readFileSync('data/questionnaire.json', 'utf8'));
+const n = Number(process.argv[2] ?? 5);
+const q = qs.find((x: any) => x.n === n);
+const r = await answerQuestion({ id: `Q${n}`, text: q.question, choices: q.choices }, chunkPolicies(docs), new LiveClient(), { ...DEFAULT_OPTIONS, runId: `smoke-${Date.now()}` });
+const { calls, ...rest } = r;
+console.log(JSON.stringify(rest, null, 1));
+for (const c of calls) console.log(c.endpoint, c.credits, c.error ?? '', JSON.stringify(c.response ?? '').slice(0, 600));

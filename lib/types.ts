@@ -83,7 +83,11 @@ export interface QuestionResult {
   answerLabel: string | null;
   probability: number | null;
   probabilities: Record<string, number> | null;
+  /** The option a second reading picked from the quoted sentence alone. */
+  secondReading?: string | null;
   evidence: Evidence | null;
+  /** Every supporting sentence Extract returned, first one highlighted. */
+  evidenceAll?: string[];
   ownerTeam: string | null;
   controlArea: string | null;
   comment: string | null;

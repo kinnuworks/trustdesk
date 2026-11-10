@@ -17,10 +17,7 @@ function fake(script: Script, fail?: Endpoint): ClockedLike & { seen: Endpoint[]
   const base: Script = {
     injection: { injection: 0.01, threshold: 0.5, verdict: 'benign' },
     rerank: { results: [{ index: 0, action: 'use', relevance_score: 0.9 }, { index: 1, action: 'skip', relevance_score: 0.1 }] },
-    decide: (b: any) =>
-      b.questions.answer
-        ? { answers: { answer: { choice: 'option_1', probabilities: { option_1: 0.93, option_2: 0.05, not_established: 0.02 }, confidence: 0.93 } } }
-        : { answers: { supports: { noul: 0.9 } } },
+    decide: { answers: { answer: { choice: 'option_1', probabilities: { option_1: 0.93, option_2: 0.05, not_established: 0.02 }, confidence: 0.93 } } },
     extract: (b: any) => {
       const s = 'User sessions expire after 30 minutes of inactivity.';
       return { fields: { evidence: { value: s, start: b.text.indexOf(s) } } };
@@ -73,10 +70,7 @@ describe('answerQuestion', () => {
   });
 
   it('does not fill an answer below the confidence threshold', async () => {
-    const dec = (b: any) =>
-      b.questions.answer
-        ? { answers: { answer: { choice: 'option_1', probabilities: { option_1: 0.55, option_2: 0.4, not_established: 0.05 } } } }
-        : { answers: { supports: { noul: 0.9 } } };
+    const dec = { answers: { answer: { choice: 'option_1', probabilities: { option_1: 0.55, option_2: 0.4, not_established: 0.05 } } } };
     const r = await answerQuestion(q, policies, fake({ decide: dec }), opts);
     expect(r.status).toBe('owner');
     expect(r.reasons.map((x) => x.code)).toContain('low_confidence');
@@ -91,9 +85,9 @@ describe('answerQuestion', () => {
 
   it('routes to an owner when the quoted sentence does not support the answer', async () => {
     const dec = (b: any) =>
-      b.questions.answer
-        ? { answers: { answer: { choice: 'option_1', probabilities: { option_1: 0.95 } } } }
-        : { answers: { supports: { noul: 0.1 } } };
+      b.state.includes('The only policy text available')
+        ? { answers: { answer: { choice: 'not_established', probabilities: { not_established: 0.9 } } } }
+        : { answers: { answer: { choice: 'option_1', probabilities: { option_1: 0.95 } } } };
     const r = await answerQuestion(q, policies, fake({ decide: dec }), opts);
     expect(r.reasons.map((x) => x.code)).toContain('evidence_disagrees');
   });
