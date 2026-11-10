@@ -1,6 +1,6 @@
 import { Clocked } from 'clocked-sdk';
-import type { CallResult, ClockedLike } from './client';
-import type { Endpoint } from './types';
+import type { CallResult, ClockedLike } from './client.js';
+import type { Endpoint } from './types.js';
 
 /** The real Clocked API through the official SDK. Server-side only: it reads CLOCKED_API_KEY. */
 export class LiveClient implements ClockedLike {

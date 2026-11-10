@@ -1,4 +1,4 @@
-import type { CallRecord, Endpoint } from './types';
+import type { CallRecord, Endpoint } from './types.js';
 
 /** What the engine needs from Clocked: one POST per endpoint. */
 export interface CallResult<T = any> {
@@ -63,7 +63,9 @@ export interface Recording {
 /** Plays back recorded live responses. A request that was never recorded fails loudly. */
 export class ReplayClient implements ClockedLike {
   private byHash = new Map<string, Recording>();
-  constructor(recordings: Recording[], private delayMs = 0) {
+  private delayMs: number;
+  constructor(recordings: Recording[], delayMs = 0) {
+    this.delayMs = delayMs;
     for (const r of recordings) this.byHash.set(r.hash, r);
   }
   async call<T>(endpoint: Endpoint, body: object, idempotencyKey: string): Promise<CallResult<T>> {
@@ -77,7 +79,10 @@ export class ReplayClient implements ClockedLike {
 /** Wraps a live client and keeps every response so a run can be replayed later. */
 export class RecordingClient implements ClockedLike {
   recordings: Recording[] = [];
-  constructor(private inner: ClockedLike) {}
+  private inner: ClockedLike;
+  constructor(inner: ClockedLike) {
+    this.inner = inner;
+  }
   async call<T>(endpoint: Endpoint, body: object, idempotencyKey: string): Promise<CallResult<T>> {
     const res = await this.inner.call<T>(endpoint, body, idempotencyKey);
     this.recordings.push({

@@ -1,4 +1,4 @@
-import type { Passage, PolicyDoc } from './types';
+import type { Passage, PolicyDoc } from './types.js';
 
 /**
  * Split each policy into passages at its "## " headings. Passages keep their offset inside the

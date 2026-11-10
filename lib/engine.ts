@@ -1,4 +1,4 @@
-import { idempotencyKeyFor, toCallRecord, type CallResult, type ClockedLike } from './client';
+import { idempotencyKeyFor, toCallRecord, type CallResult, type ClockedLike } from './client.js';
 import {
   CONTROL_AREAS,
   OWNER_TEAMS,
@@ -8,7 +8,7 @@ import {
   type Question,
   type QuestionResult,
   type Reason,
-} from './types';
+} from './types.js';
 
 export interface EngineOptions {
   /** Decide probability needed to fill an answer without a person. */

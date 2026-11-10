@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import type { CallResult, ClockedLike } from './client';
-import { answerQuestion, DEFAULT_OPTIONS } from './engine';
-import { chunkPolicies } from './policies';
-import type { Endpoint, Question } from './types';
+import type { CallResult, ClockedLike } from './client.js';
+import { answerQuestion, DEFAULT_OPTIONS } from './engine.js';
+import { chunkPolicies } from './policies.js';
+import type { Endpoint, Question } from './types.js';
 
 const policies = chunkPolicies([
   { id: 'a', title: 'Access Policy', text: '# Access Policy\n\n## Sessions\nUser sessions expire after 30 minutes of inactivity.\n' },
