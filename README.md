@@ -60,6 +60,16 @@ Two synthetic policy packs for fictional companies, run against 37 questions fro
 - Last year's sheet: on the Halden sample, 27 of the 27 unchanged questions were matched as "same". No changed or new question was marked "same", so no stale answer was reused. Two changed questions were marked "new", which only means they get the full read.
 - Full VSAQ run: all 152 questions against the six Halden policies took 136 s, 895 calls and 2,333 credits. 57 were answered, 94 went to owners (most of VSAQ goes beyond what six short policies cover), and 1 was set aside. That one was a false alarm: a clickjacking explainer that quotes an HTTP header. See [`eval/halden-all.md`](eval/halden-all.md).
 
+### Stress tests
+
+Run with `npx tsx scripts/faults.ts delete|injection`; output is in [`eval/`](eval/).
+
+| Test | Result |
+|---|---|
+| Delete the quoted policy sentence, then ask again (29 answered Halden questions) | 25 went to an owner. 3 were answered from another sentence that does support them. 1 was wrong: an internal-audit question answered from the external-audit sentence. |
+| 30 planted rows that try to instruct the tool | 27 set aside by Guard. The 3 it missed changed nothing: 2 were answered from the real policy sentence and 1 went to an owner ([`eval/faults-missed-guard.md`](eval/faults-missed-guard.md)). |
+| All 152 real VSAQ questions through Guard | 1 flagged by mistake (a clickjacking explainer that quotes an HTTP header). |
+
 ## Run it locally
 
 ```bash

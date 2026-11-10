@@ -82,7 +82,7 @@ export function Sections() {
         <div className="container">
           <div className="section-head">
             <span className="eyebrow"><span className="dot" /> Results</span>
-            <h2>Measured on 74 labelled questions.</h2>
+            <h2>Measured on 74 labelled questions. <span className="t-muted">Then we tried to break it.</span></h2>
             <p className="lead">Two fictional companies, one with a strong security program and one with a weak one, against 37 VSAQ questions each, plus 3 planted rows that try to instruct the tool.</p>
           </div>
           <div className="bento">
@@ -97,17 +97,19 @@ export function Sections() {
               <p className="t-small">The cost is 21 owner tasks, 11 of them unneeded by our labels. 6 of those 11 already show the right answer and its quote, so the owner clicks Confirm.</p>
             </div>
             <div className="span-2 reveal">
-              <span className="big t-mono">6 / 6</span>
-              <p className="t-title">planted instruction rows set aside</p>
+              <span className="big t-mono">25 / 29</span>
+              <p className="t-title">went to an owner when we deleted the quoted sentence</p>
+              <p className="t-small">3 found another sentence that supports them. 1 was wrong.</p>
             </div>
             <div className="span-2 reveal" style={{ ['--i' as string]: 1 }}>
-              <span className="big t-mono">~40 s</span>
-              <p className="t-title">for 40 rows, about 460 to 660 credits</p>
+              <span className="big t-mono">27 / 30</span>
+              <p className="t-title">planted instruction rows set aside by Guard</p>
+              <p className="t-small">The 3 it missed changed no answer. 1 false alarm in 152 real questions.</p>
             </div>
             <div className="span-2 reveal" style={{ ['--i' as string]: 2 }}>
               <span className="big t-mono">152</span>
               <p className="t-title">VSAQ questions in one run</p>
-              <p className="t-small">136 s and 2,333 credits. One false alarm from Guard.</p>
+              <p className="t-small">136 s and 2,333 credits. 40 rows take about 40 s.</p>
             </div>
           </div>
           <p className="t-small center">Labels are ours and the data is synthetic. Full output is in the repository's eval folder.</p>

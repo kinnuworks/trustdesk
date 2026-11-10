@@ -1,0 +1,377 @@
+[
+ {
+  "id": "Q1",
+  "question": "Do you have an easily discoverable way for external researchers to report security vulnerabilities in your systems?",
+  "removed": "External researchers can report vulnerabilities to security@halden.example.",
+  "before": "Yes, we have a published security email contact, or we provide another way for users to report security issues. Incoming reports are timely reviewed and triaged.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "no_policy"
+  ],
+  "newEvidence": null,
+  "credits": 8
+ },
+ {
+  "id": "Q2",
+  "question": "Have you recently reviewed your SSL configuration to ensure that only secure protocols and ciphers are offered to clients?",
+  "removed": "The TLS configuration is reviewed every quarter and only modern cipher suites are enabled.",
+  "before": "Yes, we regularly review the cipher suite advertised by the server and the protocols it uses.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established"
+  ],
+  "newEvidence": null,
+  "credits": 13
+ },
+ {
+  "id": "Q4",
+  "question": "Does the application enforce minimum password security requirements (e.g., a certain length, character classes, etc.)?",
+  "removed": "Customer-facing passwords must be at least 12 characters and are checked against a list of breached passwords.",
+  "before": "Yes",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "no_policy"
+  ],
+  "newEvidence": null,
+  "credits": 8
+ },
+ {
+  "id": "Q5",
+  "question": "Do sessions automatically time out after a specified period of inactivity?",
+  "removed": "User sessions in the Halden web application expire after 30 minutes of inactivity.",
+  "before": "Yes",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "no_policy"
+  ],
+  "newEvidence": null,
+  "credits": 8
+ },
+ {
+  "id": "Q6",
+  "question": "Does your company use firewalls to restrict traffic into and out of your network at strategic points?",
+  "removed": "Cloud security groups and a managed web application firewall restrict inbound and outbound traffic.",
+  "before": "Yes, we have firewalls for filtering all inbound and outbound traffic.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "no_policy"
+  ],
+  "newEvidence": null,
+  "credits": 8
+ },
+ {
+  "id": "Q7",
+  "question": "Is encryption and integrity protection in place for all internal network traffic that potentially carries sensitive information (including passwords, emails, files, source code, management traffic, etc.)?",
+  "removed": "All traffic between services is encrypted with TLS 1.2 or higher, including traffic inside the private network.",
+  "before": "Yes",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established"
+  ],
+  "newEvidence": null,
+  "credits": 17
+ },
+ {
+  "id": "Q8",
+  "question": "Have you implemented monitoring and alerting for your network?",
+  "removed": "Network and service availability is monitored around the clock, with alerts paged to the on-call engineer.",
+  "before": "Yes",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "evidence_disagrees"
+  ],
+  "newEvidence": null,
+  "credits": 19
+ },
+ {
+  "id": "Q9",
+  "question": "Do you operate a VPN that allows remote access to your network?",
+  "removed": "Halden Labs does not operate a traditional VPN.",
+  "before": "No",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established"
+  ],
+  "newEvidence": null,
+  "credits": 14
+ },
+ {
+  "id": "Q10",
+  "question": "Do you have a process for installing operating system and application updates and security patches on servers?",
+  "removed": "Security patches are applied monthly.",
+  "before": "Yes, we are very diligent about applying security updates to operating systems and applications.",
+  "after": "Yes, we are very diligent about applying security updates to operating systems and applications.",
+  "status": "answered",
+  "reasons": [],
+  "newEvidence": "Critical vulnerabilities are patched within 72 hours under an emergency change.",
+  "credits": 20
+ },
+ {
+  "id": "Q11",
+  "question": "Do you also have an emergency process for installing patches outside of the regular patching schedule when high-risk vulnerabilities are identified?",
+  "removed": "Critical vulnerabilities are patched within 72 hours under an emergency change.",
+  "before": "Yes, we carefully consider the risk associated with each new vulnerability and decide whether the patch should be deployed outside of the regular schedule.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established"
+  ],
+  "newEvidence": null,
+  "credits": 14
+ },
+ {
+  "id": "Q12",
+  "question": "Are your systems configured to log security-relevant events, such as authentication, data access, etc.?",
+  "removed": "Production servers, network devices and identity systems log security-relevant events, including sign-ins, privilege changes and access to customer data.",
+  "before": "Yes, we have comprehensive logging, including security events, for all relevant services.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established"
+  ],
+  "newEvidence": null,
+  "credits": 17
+ },
+ {
+  "id": "Q14",
+  "question": "Do your Windows domain administrators have separate accounts with lower privileges that they use for day-to-day tasks?",
+  "removed": "Administrators use a separate privileged account for administrative work and a standard account for email and daily tasks.",
+  "before": "Yes. Our domain administrators use their highly privileged accounts only when necessary. For day-to-day tasks, they use regular accounts with fewer privileges.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established",
+   "not_grounded"
+  ],
+  "newEvidence": null,
+  "credits": 16
+ },
+ {
+  "id": "Q15",
+  "question": "Do you have procedures in place for regularly auditing administrative access to your servers?",
+  "removed": "Administrative access to production is reviewed every quarter by the system owners.",
+  "before": "Yes, we review the actions our administrators take to make sure we catch issues, such as a compromised account.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established"
+  ],
+  "newEvidence": null,
+  "credits": 16
+ },
+ {
+  "id": "Q17",
+  "question": "Do you regularly test your backups?",
+  "removed": "Restores are tested every quarter.",
+  "before": "Yes, we test the entire process of recovery, including restoring entire systems from backup.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "no_policy"
+  ],
+  "newEvidence": null,
+  "credits": 7
+ },
+ {
+  "id": "Q19",
+  "question": "Do you fully encrypt the hard disks of laptops and other portable client devices?",
+  "removed": "All company laptops are managed by the device management platform, have full-disk encryption turned on and run endpoint malware protection.",
+  "before": "Yes, we use full-disk encryption for our laptop fleet.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established"
+  ],
+  "newEvidence": null,
+  "credits": 14
+ },
+ {
+  "id": "Q20",
+  "question": "Do you allow access to confidential information (e.g., email) from unencrypted mobile devices such as phones and tablets?",
+  "removed": "Unenrolled or unencrypted mobile devices are blocked.",
+  "before": "No, we do not allow access to corporate information from unencrypted devices such as mobile phones or tablets.",
+  "after": "No, we do not allow access to corporate information from unencrypted devices such as mobile phones or tablets.",
+  "status": "answered",
+  "reasons": [],
+  "newEvidence": "Phones may access company email only after enrolment in device management, which enforces device encryption and a passcode.",
+  "credits": 20
+ },
+ {
+  "id": "Q22",
+  "question": "How often (on average) are penetration tests done for the scope you described?",
+  "removed": "An independent firm performs a manual penetration test of the platform once a year.",
+  "before": "Annually.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "no_policy"
+  ],
+  "newEvidence": null,
+  "credits": 8
+ },
+ {
+  "id": "Q23",
+  "question": "How often do you run vulnerability scans?",
+  "removed": "Automated vulnerability scans of all production hosts run weekly.",
+  "before": "Once per month or more often",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "no_policy"
+  ],
+  "newEvidence": null,
+  "credits": 7
+ },
+ {
+  "id": "Q26",
+  "question": "Has your company selected an individual or team to be responsible for managing the information security and privacy program?",
+  "removed": "The Head of Security owns the information security and privacy program and reports to the CTO.",
+  "before": "Yes, management has selected an individual or team to be responsible for the information security and privacy program.",
+  "after": "Yes, management has selected an individual or team to be responsible for the information security and privacy program.",
+  "status": "answered",
+  "reasons": [],
+  "newEvidence": "The Security & IT team runs day-to-day controls.",
+  "credits": 20
+ },
+ {
+  "id": "Q27",
+  "question": "How often are internal information security and privacy audits performed?",
+  "removed": "Internal security audits are performed quarterly by the Security & IT team and cover the whole program.",
+  "before": "Quarterly or more often.",
+  "after": "At least annually.",
+  "status": "answered",
+  "reasons": [],
+  "newEvidence": "An independent third-party auditor performs a SOC 2 Type II audit every year covering all systems used to deliver the service.",
+  "credits": 20
+ },
+ {
+  "id": "Q28",
+  "question": "How often does an independent third party perform audits of your security and privacy program?",
+  "removed": "An independent third-party auditor performs a SOC 2 Type II audit every year covering all systems used to deliver the service.",
+  "before": "Annually.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established"
+  ],
+  "newEvidence": null,
+  "credits": 14
+ },
+ {
+  "id": "Q29",
+  "question": "Has your company selected an individual or team to be responsible for reviewing service providers and subcontractors, to ensure that they sufficiently protect the security and privacy of sensitive information and systems?",
+  "removed": "The Security & IT team reviews every service provider that will store or process customer data before contract signature, and again every year.",
+  "before": "Yes.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established",
+   "not_grounded"
+  ],
+  "newEvidence": null,
+  "credits": 17
+ },
+ {
+  "id": "Q30",
+  "question": "Do your written contracts with relevant third parties require them to adequately protect the privacy and security of all confidential information they may get access to during the partnership?",
+  "removed": "Contracts with these providers require them to protect the security and confidentiality of customer data at least to the standard of this program.",
+  "before": "Yes, we require all our outsourcing providers, vendors, and subcontractors to agree to contract clauses that assert security requirements.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established",
+   "not_grounded"
+  ],
+  "newEvidence": null,
+  "credits": 16
+ },
+ {
+  "id": "Q31",
+  "question": "Is your change management process formally documented, and does it classify changes by impact and size?",
+  "removed": "Production changes go through a documented change process. Changes are classified as standard, normal or emergency by impact, and every change record is retained.",
+  "before": "Yes",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "no_policy"
+  ],
+  "newEvidence": null,
+  "credits": 8
+ },
+ {
+  "id": "Q32",
+  "question": "Are incident response procedures documented?",
+  "removed": "This plan documents how Halden Labs detects, triages, contains, investigates and recovers from security incidents.",
+  "before": "Yes",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established",
+   "not_grounded"
+  ],
+  "newEvidence": null,
+  "credits": 16
+ },
+ {
+  "id": "Q33",
+  "question": "Do you inform affected customers about security incidents?",
+  "removed": "Affected customers are notified without undue delay, and in any case within 72 hours of confirming a security incident that affects their data.",
+  "before": "Yes",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established",
+   "not_grounded"
+  ],
+  "newEvidence": null,
+  "credits": 17
+ },
+ {
+  "id": "Q35",
+  "question": "Do you have processes in place to make sure access (both physical and logical) is revoked when an employee, intern, vendor, contractor, or other associate leaves the company or a contract ends?",
+  "removed": "When an employee, contractor or intern leaves, HR raises an offboarding ticket and all logical access is revoked within 24 hours.",
+  "before": "Yes",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established"
+  ],
+  "newEvidence": null,
+  "credits": 15
+ },
+ {
+  "id": "Q36",
+  "question": "How often do you require your employees to undergo information security and privacy training?",
+  "removed": "All employees complete security and privacy training during onboarding and then every year.",
+  "before": "Upon hire, and at least once per year.",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established",
+   "not_grounded"
+  ],
+  "newEvidence": null,
+  "credits": 16
+ },
+ {
+  "id": "Q37",
+  "question": "Do you perform background checks for personnel who are entrusted with sensitive information or granted access to sensitive systems?",
+  "removed": "Background checks are performed for employees in Engineering and Customer Support before they are granted access to production systems or customer data.",
+  "before": "Yes",
+  "after": null,
+  "status": "owner",
+  "reasons": [
+   "not_established"
+  ],
+  "newEvidence": null,
+  "credits": 16
+ }
+]
