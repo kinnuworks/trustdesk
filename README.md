@@ -6,12 +6,10 @@ Each answer needs a decision, an exact quote and a filled record, and Clocked re
 
 **Live app:** https://trustdesk-questionnaires.vercel.app (opens on a sample request, no sign-up, no key)
 
-**Try it in 30 seconds**
+Try it in 30 seconds:
 1. Open the link. A 40-question questionnaire is answered on screen, replayed from a recorded live run.
 2. Click any row. You see the probability for each option, the policy sentence highlighted in place, the comment check, and every raw Clocked request and response.
 3. Open **Owner inbox** for what it would not answer and why. Open **Try your own policies** to run up to 25 questions live on text you paste.
-
----
 
 ## What happens to each question
 
@@ -29,15 +27,15 @@ A questionnaire comes in as one request. Every row goes through the same steps, 
 | 8. Check for conflicts | Compare (`/compare`) | Only when the evidence spans two policies. A conflict shows both quotes and goes to an owner. |
 
 Two more features use the same endpoints:
-- **Answer library:** an answer an owner saves becomes a source for the next run.
-- **Last year's sheet:** Rerank finds the closest question in last year's completed questionnaire, and Compare says whether it's the same question, changed or new. Only "same" can reuse the old answer.
+- Answer library: an answer an owner saves becomes a source for the next run.
+- Last year's sheet: Rerank finds the closest question in last year's completed questionnaire, and Compare says whether it's the same question, changed or new. Only "same" can reuse the old answer.
 
 ## Uncertain results, missing information and failed requests
 
-- **Uncertain:** below the confidence threshold, or the two readers disagree. The cell stays empty and the question becomes an owner task, with the reason in plain words.
-- **Missing:** no passage (Rerank all `skip`), `not_established` from Decide, or `null` from Extract. All three are treated as "a person decides". Nothing is guessed.
-- **Failed:** the cell shows "Not answered: call failed". Retry reuses the same Idempotency-Key, so Clocked runs and bills the work once. The request can't be exported while any question is in that state.
-- **Owner tasks** can be posted to a Microsoft Teams or Slack channel through an incoming webhook (owner team, question, reason, link back).
+- Uncertain: below the confidence threshold, or the two readers disagree. The cell stays empty and the question becomes an owner task, with the reason in plain words.
+- Missing: no passage (Rerank all `skip`), `not_established` from Decide, or `null` from Extract. All three send the question to a person instead of a guess.
+- Failed: the cell shows "Not answered: call failed". Retry reuses the same Idempotency-Key, so Clocked runs and bills the work once. The request can't be exported while any question is in that state.
+- Owner tasks can be posted to a Microsoft Teams or Slack channel through an incoming webhook (owner team, question, reason, link back).
 
 ## Results
 
@@ -55,8 +53,8 @@ Two synthetic policy packs for fictional companies, run against 37 questions fro
 
 - The design trades extra owner tasks for fewer wrong answers. Half the owner tasks were questions our labels say the policies settle, for example "backup media in an off-site facility" against a policy that says "backed up continuously to a second cloud region". A person resolves those in seconds.
 - The one wrong fill: Orrin's leaver policy has no time limit and doesn't cover physical access, and TrustDesk still answered "Yes". One label was corrected after the first run, noted in [`data/labels-b.json`](data/labels-b.json).
-- **Last year's sheet:** on the Halden sample, 27 of the 27 unchanged questions were matched as "same". No changed or new question was marked "same", so no stale answer was reused. Two changed questions were marked "new", which only means they get the full read.
-- **Full VSAQ run:** all 152 questions against the six Halden policies took 136 s, 895 calls and 2,333 credits. 57 were answered, 94 went to owners (most of VSAQ goes beyond what six short policies cover), and 1 was set aside. That one was a false alarm: a clickjacking explainer that quotes an HTTP header. See [`eval/halden-all.md`](eval/halden-all.md).
+- Last year's sheet: on the Halden sample, 27 of the 27 unchanged questions were matched as "same". No changed or new question was marked "same", so no stale answer was reused. Two changed questions were marked "new", which only means they get the full read.
+- Full VSAQ run: all 152 questions against the six Halden policies took 136 s, 895 calls and 2,333 credits. 57 were answered, 94 went to owners (most of VSAQ goes beyond what six short policies cover), and 1 was set aside. That one was a false alarm: a clickjacking explainer that quotes an HTTP header. See [`eval/halden-all.md`](eval/halden-all.md).
 
 ## Run it locally
 
