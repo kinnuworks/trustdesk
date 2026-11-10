@@ -18,7 +18,7 @@ const FAQ = [
   ['Is the sample on the first screen real?', "Yes. It is a recorded live run against Clocked. Your browser runs the same engine again and answers each Clocked call from the recorded response, so the routing rules run in front of you. Click any row and open the raw calls to see every request and response."],
   ['What happens when Clocked is unsure?', 'The cell stays blank and the question becomes a task for the owning team, with the reason in plain words: low confidence, no supporting sentence, two readers disagreeing, an unsupported comment, or two policies that conflict.'],
   ['What if a call fails?', 'The row shows "Call failed" and nothing is filled. Retry sends the same Idempotency-Key, so Clocked runs and bills the work once. The questionnaire cannot be exported while any row is in that state.'],
-  ['Why do so many questions go to an owner?', 'TrustDesk would rather ask than guess. In our test set about half of the owner tasks were questions the policies arguably settle, and a person clears those in seconds. Only one of 53 automatic answers was wrong.'],
+  ['Why do so many questions go to an owner?', 'TrustDesk would rather ask than guess. In our test set 11 of the 21 owner tasks were questions our labels say the policies settle. When Decide already has an answer, the task shows it with its quote and the owner confirms it with one click. Only one of 53 automatic answers was wrong.'],
   ['Can I run it on my own policies?', 'Yes. Open "Your policies", paste policy text and a CSV of up to 25 questions. The run calls Clocked live through a server route that keeps the key private. Nothing is stored on the server.'],
   ['Where do the questions come from?', "Google's open-source VSAQ questionnaire (Apache 2.0). The two companies, Halden Labs and Orrin Freight, are fictional, and their policies are synthetic."],
 ];
@@ -94,7 +94,7 @@ export function Sections() {
             <div className="span-3 reveal" style={{ ['--i' as string]: 1 }}>
               <span className="big t-mono">10 / 11</span>
               <p className="t-title">questions that needed a person got one</p>
-              <p className="t-small">The price: 21 owner tasks in total, about half of which the policies arguably settle.</p>
+              <p className="t-small">The cost is 21 owner tasks, 11 of them unneeded by our labels. 6 of those 11 already show the right answer and its quote, so the owner clicks Confirm.</p>
             </div>
             <div className="span-2 reveal">
               <span className="big t-mono">6 / 6</span>

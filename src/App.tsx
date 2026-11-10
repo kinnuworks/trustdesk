@@ -504,13 +504,28 @@ function Inbox({ req, rowNo, onOpen, onAnswer }: { req: RequestState; rowNo: Map
 }
 
 function Task({ n, q, r, onOpen, onAnswer, onSend, sent }: { n: number; q: Question; r: QuestionResult; onOpen: () => void; onAnswer: (q: Question, r: QuestionResult, c: number, n: string) => void; onSend: () => void; sent?: string }) {
+  const suggested = r.status === 'owner' && r.answerIndex != null ? r.answerIndex : null;
+  const [editing, setEditing] = useState(suggested == null);
   const [choice, setChoice] = useState<number>(r.answerIndex ?? 0);
   const [note, setNote] = useState('');
   return (
     <div className="task">
       <p className="task__q"><span className="t-mono dim">{n}</span> {q.text}</p>
       <p className="why">{r.reasons.map((x) => x.text).join(' ')}</p>
-      {r.status !== 'set_aside' && (
+      {suggested != null && !editing && (
+        <div className="suggest">
+          <div>
+            <p className="small dim">Suggested answer</p>
+            <p className="suggest__a">{clip(q.choices[suggested], 120)}</p>
+            {r.evidence && <p className="small">“{clip(r.evidence.quote, 140)}” <span className="dim">{r.evidence.docTitle}</span></p>}
+          </div>
+          <div className="suggest__btns">
+            <button className="btn btn-candy btn-sm" onClick={() => onAnswer(q, r, suggested, r.comment ?? '')}>Confirm</button>
+            <button className="btn btn-outline btn-sm" onClick={() => setEditing(true)}>Change</button>
+          </div>
+        </div>
+      )}
+      {r.status !== 'set_aside' && editing && (
         <div className="task__answer">
           <select value={choice} onChange={(e) => setChoice(Number(e.target.value))} aria-label="Answer">
             {q.choices.map((c, i) => <option key={i} value={i}>{clip(c, 80)}</option>)}
