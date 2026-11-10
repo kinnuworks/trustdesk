@@ -2,7 +2,7 @@
 
 **Security questionnaires answered from your own policies. Anything the policies don't settle goes to the team that owns it.**
 
-Each answer needs a decision, an exact quote and a filled record, and Clocked returns all three with probabilities and source offsets. So TrustDesk only fills an answer when two independent reads agree and every claim checks out against the policy text.
+Clocked is an API that returns decisions with probabilities and quotes with their exact position in the source text. That is what this job needs: an answer only counts if it comes with the policy sentence that proves it. TrustDesk fills a cell only when Clocked's answer and a second answer, read from the quoted sentence alone, agree, and when the customer-facing comment checks out against the policies.
 
 **Live app:** https://trustdesk-questionnaires.vercel.app (opens on a sample request, no sign-up, no key)
 
