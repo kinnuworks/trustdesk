@@ -40,3 +40,4 @@ gitignore-add.txt
 SETUP.md
 stranger.sh
 .playwright-mcp/
+.claude/

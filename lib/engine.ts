@@ -249,12 +249,14 @@ export async function answerQuestion(
         evidence: 'flagged',
       });
       const pair = (cmp.pairs as any[])[0];
-      if (pair?.relation === 'conflicting' || pair?.conflict) {
-        r.conflict = {
-          a: { docTitle: a.docTitle, quote: pair?.conflict?.a?.quote ?? '' },
-          b: { docTitle: b.docTitle, quote: pair?.conflict?.b?.quote ?? '' },
+      const found = pair?.conflicts?.[0] ?? pair?.conflict ?? null;
+      if (pair?.relation === 'conflicting' || found) {
+        const side = (x: any, fallback: Passage) => {
+          const p = [a, b].find((d) => d.id === x?.document) ?? fallback;
+          return { docTitle: p.docTitle, quote: String(x?.quote ?? '').replace(/^## .*\n/, '').trim() };
         };
-        reasons.push({ code: 'conflict', text: `${a.docTitle} and ${b.docTitle} disagree on this point.` });
+        r.conflict = { a: side(found?.a, a), b: side(found?.b, b) };
+        reasons.push({ code: 'conflict', text: `${r.conflict.a.docTitle} and ${r.conflict.b.docTitle} disagree on this point.` });
       }
     }
     return finish();

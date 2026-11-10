@@ -101,11 +101,12 @@ describe('answerQuestion', () => {
   it('flags a conflict between two policies', async () => {
     const c = fake({
       rerank: { results: [{ index: 0, action: 'use', relevance_score: 0.9 }, { index: 1, action: 'use', relevance_score: 0.8 }] },
-      compare: { pairs: [{ relation: 'conflicting', conflict: { a: { quote: '30 minutes' }, b: { quote: '90 days' } } }] },
+      compare: { pairs: [{ relation: 'conflicting', conflicts: [{ a: { quote: '30 minutes', document: 'a#1' }, b: { quote: '90 days', document: 'b#1' } }] }] },
     });
     const r = await answerQuestion(q, policies, c, opts);
     expect(r.status).toBe('owner');
     expect(r.conflict?.b.docTitle).toBe('Logging Standard');
+    expect(r.conflict?.b.quote).toBe('90 days');
   });
 
   it('marks a failed call as not answered, and a retry reuses the same request keys', async () => {
