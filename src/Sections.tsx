@@ -94,7 +94,7 @@ export function Sections() {
             <div className="span-3 reveal" style={{ ['--i' as string]: 1 }}>
               <span className="big t-mono">10 / 11</span>
               <p className="t-title">questions that needed a person got one</p>
-              <p className="t-small">The cost is 21 owner tasks, 11 of them unneeded by our labels. 6 of those 11 already show the right answer and its quote, so the owner clicks Confirm.</p>
+              <p className="t-small">The cost is 21 owner tasks, 11 of them unneeded by our labels. 5 of those 11 already show the right answer and its quote, so the owner clicks Confirm.</p>
             </div>
             <div className="span-2 reveal">
               <span className="big t-mono">25 / 29</span>
