@@ -504,8 +504,8 @@ function Inbox({ req, rowNo, onOpen, onAnswer }: { req: RequestState; rowNo: Map
 }
 
 function Task({ n, q, r, onOpen, onAnswer, onSend, sent }: { n: number; q: Question; r: QuestionResult; onOpen: () => void; onAnswer: (q: Question, r: QuestionResult, c: number, n: string) => void; onSend: () => void; sent?: string }) {
-  // No one-click suggestion when two policies disagree: a person has to settle which one is right.
-  const suggested = r.status === 'owner' && r.answerIndex != null && !r.conflict ? r.answerIndex : null;
+  // One-click suggestions only come with a quote, and never when two policies disagree.
+  const suggested = r.status === 'owner' && r.answerIndex != null && !r.conflict && r.evidence ? r.answerIndex : null;
   const [editing, setEditing] = useState(suggested == null);
   const [choice, setChoice] = useState<number>(r.answerIndex ?? 0);
   const [note, setNote] = useState('');
